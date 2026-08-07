@@ -4,18 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarkari Portal 2026 - Master Services, Jobs, Schemes, Documents & Tools Hub</title>
+    
+    <!-- SEO & Search Engine Optimization Meta Tags -->
+    <meta name="description" content="Sarkari Portal 2026 - Latest Govt Jobs, Admit Cards, Results, Schemes, Age Calculator, Photo & Signature Resizer with Step-by-Step Apply Guide.">
+    <meta name="keywords" content="Sarkari Result, Sarkari Exam, Government Jobs 2026, Photo Resizer, Age Calculator, Scheme Portal">
+    <meta name="author" content="Sarkari Portal Engine">
+
     <style>
         :root { --bg:#f0f4f8; --card-bg:#fff; --text:#2d3748; --border:#e2e8f0; --header-bg:linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
         .dark-theme { --bg:#121212; --card-bg:#1e1e1e; --text:#e0e0e0; --border:#333; }
 
         * { margin:0; padding:0; box-sizing:border-box; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background:var(--bg); color:var(--text); line-height:1.5; transition:background 0.3s, color 0.3s; }
+        body { background:var(--bg); color:var(--text); line-height:1.5; transition:background 0.3s, color 0.3s; top: 0 !important; }
+
+        /* Custom Translate Box Styling */
+        .translate-wrapper {
+            background: #ffffff !important;
+            border: 2px solid #f59e0b !important;
+            padding: 4px 10px !important;
+            border-radius: 20px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+            z-index: 9999 !important;
+        }
+
+        .translate-select {
+            border: none !important;
+            outline: none !important;
+            font-size: 0.85rem !important;
+            font-weight: bold !important;
+            background: transparent !important;
+            color: #000 !important;
+            cursor: pointer !important;
+        }
+
+        /* Hiding Google Default Banners */
+        .goog-te-banner-frame, .skiptranslate { display:none !important; }
+        body { top: 0px !important; }
 
         header { background:var(--header-bg); color:#fff; text-align:center; padding:35px 15px; position:relative; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
         header h1 { font-size:2.2rem; font-weight:800; margin-bottom:6px; letter-spacing:-0.5px; }
         header p { font-size:0.95rem; opacity:0.9; margin-bottom:18px; }
 
-        .theme-btn { position:absolute; top:15px; right:15px; background:rgba(255,255,255,0.2); border:none; color:#fff; padding:6px 14px; border-radius:20px; cursor:pointer; font-size:0.8rem; font-weight:bold; }
+        .header-controls { position:absolute; top:15px; right:15px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
+        .theme-btn { background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.4); color:#fff; padding:6px 14px; border-radius:20px; cursor:pointer; font-size:0.8rem; font-weight:bold; }
 
         .search-area { max-width:650px; margin:0 auto; display:flex; flex-direction:column; gap:8px; }
         .search-box input { width:100%; padding:14px 20px; border-radius:30px; border:none; font-size:1rem; outline:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
@@ -75,12 +109,14 @@
         .job-details-badge { font-size:0.7rem; background:#f7fafc; border:1px solid #e2e8f0; color:#4a5568; padding:2px 6px; border-radius:4px; margin-top:2px; display:inline-block; }
         .deadline-badge { font-size:0.68rem; background:#fff5f5; color:#c53030; border:1px solid #feb2b2; padding:2px 6px; border-radius:4px; font-weight:bold; display:inline-block; margin-top:2px; }
 
-        .btn-group { display:flex; gap:4px; align-items:center; }
+        .btn-group { display:flex; gap:4px; align-items:center; flex-wrap:wrap; }
         .btn-action { background:#ebf8ff; color:#3182ce; padding:4px 9px; border-radius:4px; font-size:0.75rem; font-weight:bold; text-decoration:none; border:1px solid #bee3f8; white-space:nowrap; cursor:pointer; }
         .btn-action:hover { background:#3182ce; color:#fff; }
+        .btn-guide { background:#e6fffa; color:#234e52; border-color:#b2f5ea; }
+        .btn-guide:hover { background:#319795; color:#fff; }
         .btn-syl { background:#fef3c7; color:#d97706; border-color:#fde68a; }
         .btn-syl:hover { background:#d97706; color:#fff; }
-        .btn-share { background:#e6fffa; color:#234e52; border-color:#b2f5ea; padding:4px 6px; }
+        .btn-share { background:#edf2f7; color:#2d3748; border-color:#cbd5e0; padding:4px 6px; }
         .btn-fav { background:#fff5f5; color:#e53e3e; border-color:#fed7d7; padding:4px 6px; }
 
         .tag { font-size:0.68rem; padding:2px 6px; border-radius:4px; margin-right:6px; font-weight:bold; }
@@ -92,9 +128,14 @@
 
         @keyframes blink { 0% {opacity:1;} 50% {opacity:0.4;} 100% {opacity:1;} }
 
-        .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; }
-        .modal-content { background:var(--card-bg); width:90%; max-width:600px; padding:20px; border-radius:10px; position:relative; }
-        .close-modal { position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; font-weight:bold; }
+        /* Modal Box Styling */
+        .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; padding:15px; }
+        .modal-content { background:var(--card-bg); width:100%; max-width:650px; max-height:85vh; overflow-y:auto; padding:25px; border-radius:12px; position:relative; box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+        .close-modal { position:absolute; top:12px; right:18px; font-size:1.8rem; cursor:pointer; font-weight:bold; color:#a0aec0; }
+        .close-modal:hover { color:#e53e3e; }
+
+        .guide-step { background:var(--bg); border-left:4px solid #3182ce; padding:12px 15px; margin:10px 0; border-radius:0 6px 6px 0; font-size:0.88rem; }
+        .guide-step b { color:#2b6cb0; display:block; margin-bottom:3px; }
 
         .floating-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:12px 18px; border-radius:30px; font-weight:bold; font-size:0.85rem; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:99; display:flex; align-items:center; gap:8px; }
         .floating-whatsapp:hover { background:#128C7E; }
@@ -105,9 +146,29 @@
 <body>
 
     <header>
-        <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+        <div class="header-controls">
+            <!-- WORKING CUSTOM TRANSLATE DROPDOWN -->
+            <div class="translate-wrapper">
+                <span style="font-size:0.8rem; color:#333;">🌐</span>
+                <select class="translate-select" onchange="changeLanguage(this.value)">
+                    <option value="hi">Hindi (हिंदी)</option>
+                    <option value="en">English</option>
+                    <option value="bn">Bengali (বাংলা)</option>
+                    <option value="te">Telugu (తెలుగు)</option>
+                    <option value="mr">Marathi (मराठी)</option>
+                    <option value="ta">Tamil (தமிழ்)</option>
+                    <option value="ur">Urdu (اردو)</option>
+                    <option value="gu">Gujarati (ગુજરાતી)</option>
+                    <option value="kn">Kannada (ಕನ್ನಡ)</option>
+                    <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+                </select>
+            </div>
+            <div id="google_translate_element" style="display:none;"></div>
+
+            <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+        </div>
         <h1>Sarkari Employment & Utility Engine 2026</h1>
-        <p>Complete Hub for Govt Jobs, Photo Resizer, Age Calculator, Documents & Schemes</p>
+        <p>Ghar Baithe Khud Form Bharein - Cyber Cafe Ke Kaise Aur Samay Bachayein!</p>
         <div class="search-area">
             <div class="search-box">
                 <input type="text" id="searchInput" onkeyup="searchFast()" placeholder="Search ANY Service (Aadhaar, PAN, SSC CGL, Scholarship, PM Kisan, Schemes)...">
@@ -159,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn-tool" onclick="resizeImage()">Resize & Download 📥</button>
+                <button class="btn-tool" onclick="resizeImage('imageInput', 'targetWidth', 'targetHeight', 'resizerResult')">Resize & Download 📥</button>
                 <div id="resizerResult" style="margin-top:10px; text-align:center;"></div>
             </div>
 
@@ -224,6 +285,7 @@
                                 <br><div class="job-details-badge">💰 Salary: ₹35,400 - ₹1,42,400</div> <div class="deadline-badge">⏰ Last Date Approaching</div>
                             </div>
                             <div class="btn-group">
+                                <button class="btn-action btn-guide" onclick="openGuide('SSC CGL 2026', 'https://ssc.gov.in', 'Aadhaar Card, Graduation Marksheet, Live Photo, Signature', '1. Official SSC Portal par Register / Login karein.\n2. Personal & Educational Details dhyaan se bharein.\n3. Photo (20-50 KB) & Sign (10-20 KB) upload karein.\n4. Application Fee (₹100) UPI/Netbanking se pay karein.\n5. Form Submit karke Final PDF Download karein.')">📋 How to Apply</button>
                                 <a href="https://ssc.gov.in" target="_blank" class="btn-action">Apply</a>
                                 <button class="btn-action btn-syl" onclick="openSyllabus('SSC CGL 2026', 'Tier 1: Math, Reasoning, English, GK (100 Qs / 200 Marks)\nTier 2: Advanced Math, English, Reasoning & Computer Test.')">Syllabus</button>
                                 <button class="btn-action btn-fav" onclick="toggleBookmark(this, 'SSC CGL 2026')">⭐</button>
@@ -236,6 +298,7 @@
                                 <br><div class="job-details-badge">💰 Salary: ₹19,900 - ₹35,400</div>
                             </div>
                             <div class="btn-group">
+                                <button class="btn-action btn-guide" onclick="openGuide('RRB NTPC', 'https://indianrailways.gov.in', '10th/12th Marksheet, Aadhaar Card, Photo, Signature', '1. Railway Recruitment Board portal par apna Zone chunein.\n2. Registration karke OTP verify karein.\n3. Post Preference dhyaan se select karein.\n4. Document & Resized photo/signature upload karein.\n5. Payment karke Final Printout safe rakhein.')">📋 How to Apply</button>
                                 <a href="https://indianrailways.gov.in" target="_blank" class="btn-action">Apply</a>
                                 <button class="btn-action btn-syl" onclick="openSyllabus('RRB NTPC', 'CBT 1: General Awareness (40), Math (30), Reasoning (30)\nDuration: 90 Minutes.')">Syllabus</button>
                                 <button class="btn-action btn-fav" onclick="toggleBookmark(this, 'RRB NTPC')">⭐</button>
@@ -248,10 +311,10 @@
                                 <br><div class="job-details-badge">💰 In-Hand: ~₹52,000/mo</div>
                             </div>
                             <div class="btn-group">
+                                <button class="btn-action btn-guide" onclick="openGuide('SBI PO / Clerk', 'https://sbi.co.in/careers', 'Graduation Certificate, Aadhaar, Left Thumb Impression, Handwritten Declaration', '1. SBI Careers Portal par New Registration par click karein.\n2. Basic Details aur Mobile Number daal kar ID banayein.\n3. Photo, Signature, Left Thumb & Declaration upload karein.\n4. Application Fee pay karke print nikalein.')">📋 How to Apply</button>
                                 <a href="https://sbi.co.in/careers" target="_blank" class="btn-action">Apply</a>
                                 <button class="btn-action btn-syl" onclick="openSyllabus('SBI PO', 'Prelims: English (30), Quant (35), Reasoning (35)\nMains: Data Analysis & General Awareness.')">Syllabus</button>
                                 <button class="btn-action btn-fav" onclick="toggleBookmark(this, 'SBI PO')">⭐</button>
-                                <button class="btn-action btn-share" onclick="shareJob('SBI PO Form', 'https://sbi.co.in/careers')">📲</button>
                             </div>
                         </li>
                         <li data-cat="grad">
@@ -259,9 +322,9 @@
                                 <a href="https://upsc.gov.in" target="_blank" class="title-link"><span class="tag tag-student">UPSC</span>UPSC IAS / IFS Exam Form</a>
                             </div>
                             <div class="btn-group">
+                                <button class="btn-action btn-guide" onclick="openGuide('UPSC IAS', 'https://upsc.gov.in', 'One Time Registration (OTR) ID, Photo ID, Degree', '1. Pehle UPSC OTR Portal par ID banayein (agar pehle se nahi hai).\n2. Active Examination mein IAS/IFS chunein.\n3. Exam Centre aur Optional Subject dhyan se bharein.\n4. Online Fee submit karke confirmation page save karein.')">📋 How to Apply</button>
                                 <a href="https://upsc.gov.in" target="_blank" class="btn-action">Apply</a>
                                 <button class="btn-action btn-syl" onclick="openSyllabus('UPSC Civil Services', 'Prelims: GS Paper 1 (200 Marks) + CSAT Paper 2 (Qualifying)\nMains: 9 Written Papers + Interview.')">Syllabus</button>
-                                <button class="btn-action btn-fav" onclick="toggleBookmark(this, 'UPSC IAS')">⭐</button>
                             </div>
                         </li>
                         <li data-cat="10th">
@@ -269,8 +332,8 @@
                                 <a href="https://joinindianarmy.nic.in" target="_blank" class="title-link"><span class="tag tag-student">Defense</span>Indian Army Agniveer</a>
                             </div>
                             <div class="btn-group">
+                                <button class="btn-action btn-guide" onclick="openGuide('Army Agniveer', 'https://joinindianarmy.nic.in', '10th Pass Certificate, Aadhaar Card, Photo', '1. Official portal par Eligibility Check karein.\n2. User ID & Password se Login karein.\n3. Category (General Duty/Technical/Tradesman) select karein.\n4. Address aur Education Details bharein aur Form Final Submit karein.')">📋 How to Apply</button>
                                 <a href="https://joinindianarmy.nic.in" target="_blank" class="btn-action">Apply</a>
-                                <button class="btn-action btn-syl" onclick="openSyllabus('Army Agniveer', 'Written Test (GK, Science, Math) + Physical Fitness Test (1.6 KM Run).')">Syllabus</button>
                             </div>
                         </li>
                         <li data-cat="10th">
@@ -279,8 +342,8 @@
                                 <br><div class="job-details-badge">⚡ Direct Merit (No Exam)</div>
                             </div>
                             <div class="btn-group">
+                                <button class="btn-action btn-guide" onclick="openGuide('India Post GDS', 'https://indiapostgdsonline.gov.in', '10th Marksheet, Caste Certificate, Aadhaar', '1. Stage 1 Registration complete karein.\n2. Registration Number se Fee Pay karein.\n3. Circle aur Division ke Post Preference bharein.\n4. Photo/Sign upload karke printout nikaal lein.')">📋 How to Apply</button>
                                 <a href="https://indiapostgdsonline.gov.in" target="_blank" class="btn-action">Apply</a>
-                                <button class="btn-action btn-share" onclick="shareJob('India Post GDS', 'https://indiapostgdsonline.gov.in')">📲</button>
                             </div>
                         </li>
                         <li data-cat="12th">
@@ -422,11 +485,46 @@
 
     </div>
 
+    <!-- Syllabus Modal -->
     <div class="modal" id="sylModal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeSyllabus()">&times;</span>
+            <span class="close-modal" onclick="closeModal('sylModal')">&times;</span>
             <h3 id="modalTitle" style="color:#d97706; margin-bottom:10px;">Syllabus Details</h3>
             <p id="modalText" style="white-space:pre-line; font-size:0.9rem; line-height:1.6;"></p>
+        </div>
+    </div>
+
+    <!-- Step-by-Step Guidance Engine Modal -->
+    <div class="modal" id="guideModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('guideModal')">&times;</span>
+            <h3 id="guideTitle" style="color:#2b6cb0; margin-bottom:5px;">📋 Step-by-Step Form Guidance</h3>
+            <p style="font-size:0.8rem; color:#718096; margin-bottom:15px;">Cyber Cafe jaane ki zaroorat nahi! Niche दिए गए steps follow karke khud form bharein:</p>
+
+            <div style="background:#fffaf0; border:1px solid #feebc8; padding:10px; border-radius:6px; margin-bottom:15px;">
+                <b style="color:#c05621; font-size:0.85rem;">📁 Zaroori Documents (Pehle Se Tayar Rakhein):</b>
+                <p id="guideDocs" style="font-size:0.82rem; color:#742a2a; margin-top:2px;"></p>
+            </div>
+
+            <div id="guideStepsContainer"></div>
+
+            <!-- Inline Instant Resizer inside Modal -->
+            <div style="margin-top:20px; padding:15px; background:var(--bg); border-radius:8px; border:1px dashed #cbd5e0;">
+                <b style="font-size:0.88rem; color:#d97706; display:block; margin-bottom:5px;">📷 Photo/Signature Resize Karein (Form Ke Liye):</b>
+                <div style="display:flex; flex-direction:column; gap:8px;">
+                    <input type="file" id="modalImgInput" accept="image/*" style="font-size:0.8rem;">
+                    <div style="display:flex; gap:10px;">
+                        <input type="number" id="modalTargetW" value="200" placeholder="Width" style="width:50%; padding:5px; font-size:0.8rem;">
+                        <input type="number" id="modalTargetH" value="230" placeholder="Height" style="width:50%; padding:5px; font-size:0.8rem;">
+                    </div>
+                    <button class="btn-tool" style="padding:6px; font-size:0.8rem;" onclick="resizeImage('modalImgInput', 'modalTargetW', 'modalTargetH', 'modalResizerResult')">Resize & Download Image 📥</button>
+                    <div id="modalResizerResult" style="text-align:center; margin-top:5px;"></div>
+                </div>
+            </div>
+
+            <div style="margin-top:20px; text-align:center;">
+                <a id="guideApplyBtn" href="#" target="_blank" class="btn-tool" style="background:#2e7d32; text-decoration:none; display:inline-block; padding:12px 25px; font-size:0.95rem;">Sab Kuch Tayar Hai? Official Portal Par Apply Karein ➔</a>
+            </div>
         </div>
     </div>
 
@@ -434,9 +532,32 @@
         <p>© 2026 Sarkari Employment & Public Utility Portal | Ultra-Fast Student Engine</p>
     </footer>
 
-    <!-- JavaScript Engine -->
+    <!-- Google Translate Base Scripts -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'hi',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Custom Dynamic Language Switcher
+        function changeLanguage(langCode) {
+            var googleSelect = document.querySelector('.goog-te-combo');
+            if (googleSelect) {
+                googleSelect.value = langCode;
+                googleSelect.dispatchEvent(new Event('change'));
+            } else {
+                // Direct Fallback Translate Link via Google
+                window.location.href = `https://translate.google.com/translate?sl=hi&tl=${langCode}&u=${encodeURIComponent(window.location.href)}`;
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- JavaScript Main Engine -->
     <script>
-        // ⚡ AUTOMATIC LIVE RSS FEED ENGINE (Runs Async in Background)
+        // AUTOMATIC LIVE RSS FEED ENGINE
         async function fetchLiveSarkariUpdates() {
             const feedContainer = document.getElementById('liveFeedList');
             const rssFeedUrl = 'https://news.google.com/rss/search?q=sarkari+job+recruitment+notification+scheme+2026&hl=en-IN&gl=IN&ceid=IN:en';
@@ -447,7 +568,7 @@
                 const data = await response.json();
 
                 if (data.status === 'ok' && data.items.length > 0) {
-                    feedContainer.innerHTML = ''; // Clear loading message
+                    feedContainer.innerHTML = '';
                     data.items.slice(0, 5).forEach(item => {
                         const li = document.createElement('li');
                         li.innerHTML = `
@@ -470,17 +591,68 @@
             }
         }
 
-        // Trigger Live Feed Fetching on Page Load
         window.addEventListener('DOMContentLoaded', fetchLiveSarkariUpdates);
 
-        // Modal Syllabus Viewer
+        // Modals Controls
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
         function openSyllabus(title, details) {
             document.getElementById('modalTitle').innerText = '📚 Exam Pattern & Syllabus: ' + title;
             document.getElementById('modalText').innerText = details;
             document.getElementById('sylModal').style.display = 'flex';
         }
-        function closeSyllabus() {
-            document.getElementById('sylModal').style.display = 'none';
+
+        // Guidance Engine
+        function openGuide(title, applyLink, docs, stepsText) {
+            document.getElementById('guideTitle').innerText = '📋 How to Apply: ' + title;
+            document.getElementById('guideDocs').innerText = docs;
+            document.getElementById('guideApplyBtn').href = applyLink;
+
+            const stepsContainer = document.getElementById('guideStepsContainer');
+            stepsContainer.innerHTML = '';
+
+            const stepsArray = stepsText.split('\n');
+            stepsArray.forEach((step, idx) => {
+                const div = document.createElement('div');
+                div.className = 'guide-step';
+                div.innerHTML = `<b>Step ${idx + 1}:</b> ${step.replace(/^\d+\.\s*/, '')}`;
+                stepsContainer.appendChild(div);
+            });
+
+            document.getElementById('modalResizerResult').innerHTML = '';
+            document.getElementById('guideModal').style.display = 'flex';
+        }
+
+        // Image Resizer Engine
+        function resizeImage(inputId, wId, hId, resId) {
+            const fileInput = document.getElementById(inputId);
+            const targetW = parseInt(document.getElementById(wId).value);
+            const targetH = parseInt(document.getElementById(hId).value);
+            const resultBox = document.getElementById(resId);
+
+            if (!fileInput.files[0]) return alert('Kripya pehle photo select karein!');
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = new Image();
+                img.src = e.target.result;
+                img.onload = function () {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = targetW;
+                    canvas.height = targetH;
+                    canvas.getContext('2d').drawImage(img, 0, 0, targetW, targetH);
+                    const resizedUrl = canvas.toDataURL('image/jpeg', 0.85);
+
+                    resultBox.innerHTML = `
+                        <p style="color:#2f855a; font-weight:bold; font-size:0.8rem; margin-top:5px;">✅ Photo Resized!</p>
+                        <img src="${resizedUrl}" style="border:1px solid #ccc; max-width:100px; border-radius:4px; margin:5px 0;"><br>
+                        <a href="${resizedUrl}" download="sarkari_resized.jpg" class="btn-action" style="background:#2f855a; color:#fff;">Download 📥</a>
+                    `;
+                };
+            };
+            reader.readAsDataURL(fileInput.files[0]);
         }
 
         // Bookmark Toggle
@@ -524,36 +696,6 @@
         function shareJob(title, link) {
             const text = `📢 *Sarkari Job Update:* ${title}\nCheck Details & Apply Online Here: ${link}`;
             window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
-        }
-
-        // Image Resizer Engine
-        function resizeImage() {
-            const fileInput = document.getElementById('imageInput');
-            const targetW = parseInt(document.getElementById('targetWidth').value);
-            const targetH = parseInt(document.getElementById('targetHeight').value);
-            const resultBox = document.getElementById('resizerResult');
-
-            if (!fileInput.files[0]) return alert('Kripya pehle photo select karein!');
-
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const img = new Image();
-                img.src = e.target.result;
-                img.onload = function () {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = targetW;
-                    canvas.height = targetH;
-                    canvas.getContext('2d').drawImage(img, 0, 0, targetW, targetH);
-                    const resizedUrl = canvas.toDataURL('image/jpeg', 0.85);
-
-                    resultBox.innerHTML = `
-                        <p style="color:#2f855a; font-weight:bold; font-size:0.8rem; margin-top:5px;">✅ Photo Resized!</p>
-                        <img src="${resizedUrl}" style="border:1px solid #ccc; max-width:120px; border-radius:4px; margin:5px 0;"><br>
-                        <a href="${resizedUrl}" download="sarkari_resized_image.jpg" class="btn-action" style="background:#2f855a; color:#fff;">Download 📥</a>
-                    `;
-                };
-            };
-            reader.readAsDataURL(fileInput.files[0]);
         }
 
         // Instant Search Engine
