@@ -3,742 +3,863 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkari Portal 2026 - Master Services, Jobs, Schemes, Documents & Tools Hub</title>
     
-    <!-- SEO & Search Engine Optimization Meta Tags -->
-    <meta name="description" content="Sarkari Portal 2026 - Latest Govt Jobs, Admit Cards, Results, Schemes, Age Calculator, Photo & Signature Resizer with Step-by-Step Apply Guide.">
-    <meta name="keywords" content="Sarkari Result, Sarkari Exam, Government Jobs 2026, Photo Resizer, Age Calculator, Scheme Portal">
-    <meta name="author" content="Sarkari Portal Engine">
+    <!-- 🚀 ADVANCED SEO & PWA META TAGS -->
+    <title>Sarkari Result 2026 | Smart Search, Jobs, Schemes & Utility Engine</title>
+    <meta name="description" content="All-in-One Sarkari Result Portal 2026: Live Jobs, Admit Cards, Results, Smart Dynamic Search Engine, All Govt Portals, Schemes, PDF Converter & Utility Suite.">
+    <meta name="keywords" content="Sarkari Result 2026, SSC CGL, Railway Group D, UP Police, Aadhaar Portal, PAN Card, Dynamic Search, PDF Converter, Resume Builder">
+    <meta name="theme-color" content="#1e3a8a">
+
+    <!-- Web App Manifest for PWA -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIlNhcmthcmkgUmVzdWx0IDIwMjYiLAogICJzaG9ydF9uYW1lIjogIlNhcmthcmkgUG9ydGFsIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxZTNhOGEiLAogICJ0aGVtZV9jb2xvciI6ICIjMWUzYThhIgp9">
+
+    <!-- jsPDF Library for PDF Converter & Resume Generator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <style>
-        :root { --bg:#f0f4f8; --card-bg:#fff; --text:#2d3748; --border:#e2e8f0; --header-bg:linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-        .dark-theme { --bg:#121212; --card-bg:#1e1e1e; --text:#e0e0e0; --border:#333; }
-
-        * { margin:0; padding:0; box-sizing:border-box; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background:var(--bg); color:var(--text); line-height:1.5; transition:background 0.3s, color 0.3s; top: 0 !important; }
-
-        /* Custom Translate Box Styling */
-        .translate-wrapper {
-            background: #ffffff !important;
-            border: 2px solid #f59e0b !important;
-            padding: 4px 10px !important;
-            border-radius: 20px !important;
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 5px !important;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
-            z-index: 9999 !important;
+        :root {
+            --bg-body: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --primary-color: #1e3a8a;
+            --accent-color: #2563eb;
+            --header-bg: linear-gradient(135deg, #0f172a, #1e3a8a, #1d4ed8);
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --radius: 12px;
         }
 
-        .translate-select {
-            border: none !important;
-            outline: none !important;
-            font-size: 0.85rem !important;
-            font-weight: bold !important;
-            background: transparent !important;
-            color: #000 !important;
-            cursor: pointer !important;
+        body.dark-mode {
+            --bg-body: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --primary-color: #38bdf8;
+            --accent-color: #60a5fa;
+            --header-bg: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
         }
 
-        /* Hiding Google Default Banners */
-        .goog-te-banner-frame, .skiptranslate { display:none !important; }
-        body { top: 0px !important; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; transition: background 0.2s, color 0.2s; }
+        body { background-color: var(--bg-body); color: var(--text-color); line-height: 1.5; padding-bottom: 70px; }
 
-        header { background:var(--header-bg); color:#fff; text-align:center; padding:35px 15px; position:relative; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-        header h1 { font-size:2.2rem; font-weight:800; margin-bottom:6px; letter-spacing:-0.5px; }
-        header p { font-size:0.95rem; opacity:0.9; margin-bottom:18px; }
+        /* COMMUNITY BAR */
+        .community-bar { background: #0f172a; color: white; padding: 8px 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .community-btns { display: flex; gap: 8px; }
+        .btn-comm { padding: 4px 10px; border-radius: 6px; color: white; text-decoration: none; font-weight: bold; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; }
+        .btn-wa { background-color: #25D366; }
+        .btn-tg { background-color: #0088cc; }
 
-        .header-controls { position:absolute; top:15px; right:15px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
-        .theme-btn { background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.4); color:#fff; padding:6px 14px; border-radius:20px; cursor:pointer; font-size:0.8rem; font-weight:bold; }
+        /* HEADER SECTION */
+        header { background: var(--header-bg); color: white; padding: 25px 20px; text-align: center; position: relative; border-bottom: 3px solid var(--accent-color); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+        header p { color: #cbd5e1; font-size: 0.95rem; }
 
-        .search-area { max-width:650px; margin:0 auto; display:flex; flex-direction:column; gap:8px; }
-        .search-box input { width:100%; padding:14px 20px; border-radius:30px; border:none; font-size:1rem; outline:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
-        #searchFallback { display:none; background:var(--card-bg); color:#2b6cb0; padding:10px 15px; border-radius:8px; font-size:0.88rem; font-weight:bold; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
-        #searchFallback a { color:#2b6cb0; text-decoration:underline; cursor:pointer; }
+        .header-controls { position: absolute; top: 15px; right: 20px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        .top-btn, .lang-select { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.82rem; font-weight: 600; backdrop-filter: blur(5px); outline: none; }
+        .lang-select option { background: #0f172a; color: white; }
 
-        nav { background:#1a202c; padding:10px; text-align:center; position:sticky; top:0; z-index:100; display:flex; justify-content:center; flex-wrap:wrap; gap:8px; border-bottom:2px solid #3182ce; }
-        nav a { color:#edf2f7; text-decoration:none; font-size:0.82rem; font-weight:600; padding:4px 10px; border-radius:4px; transition:0.2s; }
-        nav a:hover { background:#3182ce; color:#fff; }
+        /* NAVIGATION BAR */
+        .navbar { background: #0f172a; display: flex; justify-content: center; gap: 6px; padding: 10px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .navbar a { color: #e2e8f0; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 8px 12px; border-radius: 8px; }
+        .navbar a:hover, .navbar a.active { background: var(--accent-color); color: white; }
 
-        .container { max-width:1280px; margin:20px auto; padding:0 15px; }
+        .container { max-width: 1280px; margin: 25px auto; padding: 0 16px; }
 
-        .social-bar { background:linear-gradient(90deg, #25D366, #128C7E); color:#fff; padding:12px 18px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:10px; box-shadow:0 4px 6px rgba(0,0,0,0.05); }
-        .social-btn { background:#fff; color:#128C7E; padding:6px 16px; border-radius:20px; text-decoration:none; font-weight:bold; font-size:0.85rem; }
+        /* STATS & TICKER BAR */
+        .ticker-bar { background: var(--card-bg); border: 1px solid var(--border-color); padding: 12px 18px; border-radius: var(--radius); display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-bottom: 20px; box-shadow: var(--card-shadow); flex-wrap: wrap; }
+        .ticker-badge { background: #ef4444; color: white; font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; animation: pulse 1.5s infinite; }
+        .auto-badge { background: #10b981; color: white; font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
 
-        .tools-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px; margin:25px 0; }
-        .tool-card { background:var(--card-bg); padding:20px; border-radius:8px; border:1px solid var(--border); box-shadow:0 2px 6px rgba(0,0,0,0.05); }
-        .tool-card h2 { font-size:1.1rem; color:#d97706; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+        /* SEARCH & DYNAMIC LINK RESULT BOX */
+        .search-container { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius); box-shadow: var(--card-shadow); margin-bottom: 25px; position: relative; }
+        .search-input-wrap { display: flex; gap: 10px; margin-bottom: 12px; }
+        .search-input { flex: 1; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-body); color: var(--text-color); font-size: 0.95rem; outline: none; }
+        .search-input:focus { border-color: var(--accent-color); }
         
-        .tool-inputs { display:flex; flex-direction:column; gap:10px; margin:12px 0; }
-        .tool-inputs label { font-size:0.75rem; font-weight:bold; }
-        .tool-inputs input { padding:8px 12px; border:1px solid var(--border); border-radius:5px; outline:none; background:var(--card-bg); color:var(--text); font-size:0.9rem; width:100%; }
-        .btn-tool { background:#d97706; color:#fff; border:none; padding:10px 15px; border-radius:5px; font-weight:bold; cursor:pointer; width:100%; transition:0.2s; }
-        .btn-tool:hover { background:#b45309; }
+        .tag-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag-pill { background: var(--bg-body); border: 1px solid var(--border-color); color: var(--text-color); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; cursor: pointer; }
+        .tag-pill:hover, .tag-pill.active { background: var(--accent-color); color: white; border-color: var(--accent-color); }
 
-        .filter-section { margin-bottom:20px; }
-        .pills-title { font-size:0.85rem; font-weight:bold; margin-bottom:8px; color:#718096; }
-        .category-pills { display:flex; gap:8px; overflow-x:auto; padding-bottom:5px; }
-        .pill { background:var(--card-bg); color:var(--text); padding:7px 15px; border-radius:20px; font-size:0.82rem; font-weight:bold; border:1px solid var(--border); cursor:pointer; white-space:nowrap; transition:0.2s; }
-        .pill.active, .pill:hover { background:#3182ce; color:#fff; border-color:#3182ce; }
+        /* 🚀 DYNAMIC SEARCH RESULTS STYLING */
+        .dynamic-search-results { display: none; background: var(--card-bg); border: 2px solid var(--accent-color); border-radius: 8px; margin-top: 15px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .dynamic-search-results h4 { font-size: 0.95rem; color: var(--accent-color); margin-bottom: 10px; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; }
+        .dynamic-list { list-style: none; }
+        .dynamic-list li { padding: 8px 12px; border-bottom: 1px dashed var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+        .dynamic-list li:last-child { border-bottom: none; }
+        .dynamic-list a { color: var(--primary-color); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+        .dynamic-list a:hover { text-decoration: underline; color: var(--accent-color); }
+        .cat-tag { font-size: 0.7rem; background: var(--bg-body); border: 1px solid var(--border-color); padding: 2px 6px; border-radius: 4px; color: var(--text-muted); font-weight: 600; }
 
-        .section-header { font-size:1.3rem; font-weight:800; margin:25px 0 15px 0; border-bottom:3px solid #3182ce; display:inline-block; padding-bottom:4px; }
-        .grid-3 { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:20px; margin-bottom:25px; }
-        .grid-2 { display:grid; grid-template-columns:repeat(auto-fit, minmax(480px, 1fr)); gap:20px; margin-bottom:25px; }
+        /* SECTION TITLES */
+        .section-header { font-size: 1.3rem; font-weight: 800; color: var(--primary-color); margin: 25px 0 15px 0; display: flex; align-items: center; gap: 10px; border-left: 4px solid var(--accent-color); padding-left: 10px; }
 
-        .card { background:var(--card-bg); border-radius:8px; border:1px solid var(--border); overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.05); transition:transform 0.2s; }
-        .card:hover { transform:translateY(-2px); box-shadow:0 6px 12px rgba(0,0,0,0.08); }
-        .card-head { padding:12px 16px; color:#fff; font-size:1rem; font-weight:bold; display:flex; justify-content:space-between; align-items:center; }
+        /* SARKARI GRID LAYOUT */
+        .sarkari-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .sarkari-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); }
+        .sarkari-head { color: white; padding: 12px 16px; font-weight: 700; font-size: 1rem; display: flex; justify-content: space-between; align-items: center; }
         
-        .bg-live { background: linear-gradient(135deg, #dd6b20, #e53e3e); }
-        .bg-jobs { background: linear-gradient(135deg, #1b5e20, #2e7d32); }
-        .bg-results { background: linear-gradient(135deg, #b71c1c, #c62828); }
-        .bg-schemes { background: linear-gradient(135deg, #4a148c, #6a1b9a); }
-        .bg-documents { background: linear-gradient(135deg, #1a365d, #2b6cb0); }
-        .bg-upcoming { background: linear-gradient(135deg, #b7791f, #d69e2e); }
-        .bg-scholarship { background: linear-gradient(135deg, #c05621, #dd6b20); }
-        .bg-farmers { background: linear-gradient(135deg, #22543d, #2f855a); }
-        .bg-women { background: linear-gradient(135deg, #702459, #9b2c2c); }
+        /* HEADER COLORS */
+        .head-results { background: #dc2626; } 
+        .head-admit { background: #2563eb; } 
+        .head-jobs { background: #16a34a; }
+        .head-upcoming { background: #d97706; }
+        .head-women { background: #db2777; }
+        .head-farmer { background: #059669; }
+        .head-scholarship { background: #ea580c; }
+        .head-docs { background: #0284c7; }
+        .head-syllabus { background: #9333ea; } 
+        .head-saved { background: #475569; }
 
-        .card-body { padding:14px; }
-        .card-body ul { list-style:none; }
-        .card-body li { padding:10px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; font-size:0.88rem; flex-wrap:wrap; gap:6px; }
-        .card-body li:last-child { border:none; }
-        .card-body a.title-link { color:#2b6cb0; text-decoration:none; font-weight:600; flex:1; min-width:180px; }
-        .card-body a.title-link:hover { text-decoration:underline; }
+        .sarkari-list { list-style: none; padding: 10px 15px; max-height: 450px; overflow-y: auto; }
+        .sarkari-list li { padding: 10px 0; border-bottom: 1px dashed var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 0.88rem; }
+        .sarkari-list li:last-child { border-bottom: none; }
+        .sarkari-list a.link-title { color: var(--text-color); text-decoration: none; font-weight: 600; flex: 1; line-height: 1.3; }
+        .sarkari-list a.link-title:hover { color: var(--accent-color); }
+        
+        .badge-live { background: #ef4444; color: white; font-size: 0.65rem; padding: 2px 5px; border-radius: 4px; font-weight: 700; margin-right: 6px; }
+        .badge-auto { background: #10b981; color: white; font-size: 0.65rem; padding: 2px 5px; border-radius: 4px; font-weight: 700; margin-right: 6px; }
+        .badge-soon { background: #f59e0b; color: white; font-size: 0.65rem; padding: 2px 5px; border-radius: 4px; font-weight: 700; margin-right: 6px; }
+        .badge-qual { background: #2563eb; color: white; font-size: 0.65rem; padding: 2px 5px; border-radius: 4px; font-weight: 700; margin-left: 4px; }
+        
+        .btn-action { padding: 4px 8px; border-radius: 6px; font-size: 0.72rem; text-decoration: none; font-weight: 700; border: none; cursor: pointer; }
+        .btn-view { background: #e0f2fe; color: #0284c7; }
+        .btn-save { background: #fef3c7; color: #d97706; }
 
-        .job-details-badge { font-size:0.7rem; background:#f7fafc; border:1px solid #e2e8f0; color:#4a5568; padding:2px 6px; border-radius:4px; margin-top:2px; display:inline-block; }
-        .deadline-badge { font-size:0.68rem; background:#fff5f5; color:#c53030; border:1px solid #feb2b2; padding:2px 6px; border-radius:4px; font-weight:bold; display:inline-block; margin-top:2px; }
+        /* DOCS GRID SPECIAL STYLE */
+        .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; padding: 15px; }
+        .doc-btn-card { background: var(--bg-body); border: 1px solid var(--border-color); padding: 14px 10px; border-radius: 8px; text-decoration: none; color: var(--text-color); text-align: center; font-weight: 700; font-size: 0.85rem; display: flex; flex-direction: column; gap: 6px; align-items: center; justify-content: center; }
+        .doc-btn-card:hover { border-color: var(--accent-color); background: var(--card-bg); transform: translateY(-2px); }
 
-        .btn-group { display:flex; gap:4px; align-items:center; flex-wrap:wrap; }
-        .btn-action { background:#ebf8ff; color:#3182ce; padding:4px 9px; border-radius:4px; font-size:0.75rem; font-weight:bold; text-decoration:none; border:1px solid #bee3f8; white-space:nowrap; cursor:pointer; }
-        .btn-action:hover { background:#3182ce; color:#fff; }
-        .btn-guide { background:#e6fffa; color:#234e52; border-color:#b2f5ea; }
-        .btn-guide:hover { background:#319795; color:#fff; }
-        .btn-syl { background:#fef3c7; color:#d97706; border-color:#fde68a; }
-        .btn-syl:hover { background:#d97706; color:#fff; }
-        .btn-share { background:#edf2f7; color:#2d3748; border-color:#cbd5e0; padding:4px 6px; }
-        .btn-fav { background:#fff5f5; color:#e53e3e; border-color:#fed7d7; padding:4px 6px; }
+        /* UTILITY TOOLS GRID */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-bottom: 30px; }
+        .tool-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 20px; box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: 12px; }
+        .tool-card h3 { font-size: 1.05rem; color: var(--primary-color); font-weight: 700; }
+        .tool-card input, .tool-card select, .tool-card textarea { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-body); color: var(--text-color); outline: none; }
+        .btn-tool { background: var(--accent-color); color: white; border: none; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: 700; width: 100%; text-align: center; }
 
-        .tag { font-size:0.68rem; padding:2px 6px; border-radius:4px; margin-right:6px; font-weight:bold; }
-        .tag-women { background:#fed7e2; color:#9b2c2c; }
-        .tag-student { background:#ebf8ff; color:#2b6cb0; }
-        .tag-farmer { background:#f0fff4; color:#276749; }
-        .tag-doc { background:#edf2f7; color:#4a5568; }
-        .tag-live { background:#fe2c55; color:#fff; animation: blink 1.5s infinite; }
+        /* MODAL POPUP & FLOATING HELPLINE BUTTON */
+        .helpline-trigger { position: fixed; bottom: 80px; right: 20px; background: #d97706; color: white; border: none; padding: 10px 18px; border-radius: 30px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.25); z-index: 999; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 1001; }
+        .modal-content { background: var(--card-bg); color: var(--text-color); padding: 25px; border-radius: var(--radius); max-width: 500px; width: 90%; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-color); width: auto; }
+        .helpline-table { width: 100%; border-collapse: collapse; }
+        .helpline-table td, .helpline-table th { padding: 8px; border: 1px solid var(--border-color); text-align: left; font-size: 0.85rem; }
 
-        @keyframes blink { 0% {opacity:1;} 50% {opacity:0.4;} 100% {opacity:1;} }
+        /* PRINTABLE AREA FOR PRINT HELPER */
+        @media print {
+            body * { visibility: hidden; }
+            #printable-area, #printable-area * { visibility: visible; }
+            #printable-area { position: absolute; left: 0; top: 0; width: 100%; }
+        }
 
-        /* Modal Box Styling */
-        .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; padding:15px; }
-        .modal-content { background:var(--card-bg); width:100%; max-width:650px; max-height:85vh; overflow-y:auto; padding:25px; border-radius:12px; position:relative; box-shadow:0 10px 25px rgba(0,0,0,0.3); }
-        .close-modal { position:absolute; top:12px; right:18px; font-size:1.8rem; cursor:pointer; font-weight:bold; color:#a0aec0; }
-        .close-modal:hover { color:#e53e3e; }
+        /* MOBILE BOTTOM NAVIGATION BAR */
+        .mobile-bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; padding: 10px 0; z-index: 1000; border-top: 1px solid var(--border-color); }
+        .mobile-bottom-nav a { color: #94a3b8; text-decoration: none; font-size: 0.72rem; text-align: center; flex: 1; display: flex; flex-direction: column; align-items: center; font-weight: 600; }
+        .mobile-bottom-nav a.active { color: #38bdf8; }
 
-        .guide-step { background:var(--bg); border-left:4px solid #3182ce; padding:12px 15px; margin:10px 0; border-radius:0 6px 6px 0; font-size:0.88rem; }
-        .guide-step b { color:#2b6cb0; display:block; margin-bottom:3px; }
+        /* FOOTER */
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 30px 20px; margin-top: 40px; font-size: 0.85rem; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; flex-wrap: wrap; }
+        .footer-links a { color: #e2e8f0; text-decoration: none; cursor: pointer; }
 
-        .floating-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:12px 18px; border-radius:30px; font-weight:bold; font-size:0.85rem; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:99; display:flex; align-items:center; gap:8px; }
-        .floating-whatsapp:hover { background:#128C7E; }
-
-        footer { background:#1a202c; color:#a0aec0; text-align:center; padding:25px; font-size:0.82rem; margin-top:40px; }
+        @media (max-width: 768px) {
+            .header-controls { position: static; justify-content: center; margin-bottom: 12px; }
+            .mobile-bottom-nav { display: flex; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- COMMUNITY JOIN BAR -->
+    <div class="community-bar">
+        <span>📢 सरकारी जॉब्स व अपडेट्स तुरंत अपने मोबाइल पर पाएं:</span>
+        <div class="community-btns">
+            <a href="https://whatsapp.com" target="_blank" class="btn-comm btn-wa">💬 WhatsApp Group</a>
+            <a href="https://telegram.org" target="_blank" class="btn-comm btn-tg">✈️ Telegram Channel</a>
+        </div>
+    </div>
+
+    <!-- 📱 MOBILE APP BOTTOM NAV -->
+    <div class="mobile-bottom-nav">
+        <a href="#secJobs" class="active"><span>💼</span>Jobs</a>
+        <a href="#secDocs"><span>🪪</span>Docs</a>
+        <a href="#secSchemes"><span>🌟</span>Yojana</a>
+        <a href="#secPdf"><span>📄</span>PDF Tool</a>
+        <a href="#secSaved"><span>⭐</span>Saved</a>
+    </div>
+
+    <!-- HEADER SECTION -->
     <header>
         <div class="header-controls">
-            <!-- WORKING CUSTOM TRANSLATE DROPDOWN -->
-            <div class="translate-wrapper">
-                <span style="font-size:0.8rem; color:#333;">🌐</span>
-                <select class="translate-select" onchange="changeLanguage(this.value)">
-                    <option value="hi">Hindi (हिंदी)</option>
-                    <option value="en">English</option>
-                    <option value="bn">Bengali (বাংলা)</option>
-                    <option value="te">Telugu (తెలుగు)</option>
-                    <option value="mr">Marathi (मराठी)</option>
-                    <option value="ta">Tamil (தமிழ்)</option>
-                    <option value="ur">Urdu (اردو)</option>
-                    <option value="gu">Gujarati (ગુજરાતી)</option>
-                    <option value="kn">Kannada (ಕನ್ನಡ)</option>
-                    <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
-                </select>
-            </div>
-            <div id="google_translate_element" style="display:none;"></div>
-
-            <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+            <button class="top-btn" id="installAppBtn" style="display:none; background:#10b981;">📱 Install App</button>
+            <select class="lang-select" id="langSelect">
+                <option value="hi">🌐 हिंदी (Hindi)</option>
+                <option value="en">🌐 English</option>
+            </select>
+            <button class="top-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+            <button class="top-btn" onclick="requestNotification()">🔔 Alerts</button>
         </div>
-        <h1>Sarkari Employment & Utility Engine 2026</h1>
-        <p>Ghar Baithe Khud Form Bharein - Cyber Cafe Ke Kaise Aur Samay Bachayein!</p>
-        <div class="search-area">
-            <div class="search-box">
-                <input type="text" id="searchInput" onkeyup="searchFast()" placeholder="Search ANY Service (Aadhaar, PAN, SSC CGL, Scholarship, PM Kisan, Schemes)...">
-            </div>
-            <div id="searchFallback">
-                🔍 Page par nahi mila? <a id="fallbackLink" href="#" target="_blank">Google par <b>"<span id="fallbackText"></span>"</b> Search Karein ↗</a>
-            </div>
-        </div>
+        <h1>Sarkari Result Auto Portal 2026</h1>
+        <p>Live Jobs, Official Portals, Schemes, PDF Converter & Full Utility Suite</p>
     </header>
 
-    <nav>
-        <a href="#live-updates">🔴 Live Feed</a>
-        <a href="#social">📲 WhatsApp Alerts</a>
-        <a href="#tools">🛠️ Smart Tools</a>
-        <a href="#jobs">Jobs & Forms</a>
-        <a href="#documents">All Govt Documents</a>
-        <a href="#scholarships">Scholarships</a>
-        <a href="#women-schemes">Women Welfare</a>
-        <a href="#farmers-schemes">Farmers & Rural</a>
+    <!-- NAVIGATION MENU -->
+    <nav class="navbar">
+        <a href="#secJobs" class="active">💼 Latest Jobs</a>
+        <a href="#secAdmit">🎫 Admit Card</a>
+        <a href="#secResults">📜 Results</a>
+        <a href="#secUpcoming">⏳ Upcoming Vacancies</a>
+        <a href="#secDocs">🪪 Government Documents</a>
+        <a href="#secSchemes">🌟 Sarkari Yojana</a>
+        <a href="#secNewTools">⚡ Smart Add-ons</a>
+        <a href="#secPdf">📄 Image/Text to PDF</a>
+        <a href="#secResume">📝 Resume Builder</a>
+        <a href="#secTools">🛠️ Photo Resizer & Tools</a>
+        <a href="#secSaved">⭐ Saved Items</a>
     </nav>
-
-    <a href="https://whatsapp.com" target="_blank" class="floating-whatsapp">💬 Live WhatsApp Alerts</a>
 
     <div class="container">
 
-        <div class="social-bar" id="social">
-            <div><b>📢 Join Daily Sarkari Job & Scheme Updates on WhatsApp!</b> (1-Click Free Alerts)</div>
-            <a href="https://whatsapp.com" target="_blank" class="social-btn">Join Group Free ➔</a>
+        <!-- STATS & LIVE TICKER BAR -->
+        <div class="ticker-bar">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <span class="ticker-badge">LIVE UPDATES</span>
+                <span class="auto-badge" id="autoStatusBadge">🤖 Auto-Sync: Active</span>
+                <span style="font-size:0.88rem; font-weight:600;" id="liveClock">Loading Date...</span>
+            </div>
+            <div style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">
+                ⚡ Centralized Government Recruitment & Public Utility Portal
+            </div>
         </div>
 
-        <!-- 🛠️ Student Utility Tools Section -->
-        <div class="tools-grid" id="tools">
+        <!-- SEARCH CONTAINER WITH DYNAMIC SEARCH ENGINE -->
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search Jobs, SSC, Railway, UP/Bihar Schemes, Passport, Scholarship, EPF, Birth Certificate..." onkeyup="smartUniversalSearch()">
+            </div>
+            <div class="tag-pills">
+                <span class="tag-pill active" onclick="setFilter('all', this)">All Category</span>
+                <span class="tag-pill" onclick="setFilter('Railway', this)">🚆 Railway 2026</span>
+                <span class="tag-pill" onclick="setFilter('SSC', this)">📊 SSC Jobs</span>
+                <span class="tag-pill" onclick="setFilter('10th', this)">🎓 10th Pass</span>
+                <span class="tag-pill" onclick="setFilter('UP', this)">📍 UP Police</span>
+                <span class="tag-pill" onclick="setFilter('Bihar', this)">📍 Bihar Special</span>
+                <span class="tag-pill" onclick="setFilter('योजना', this)">🌟 सरकारी योजनाएं</span>
+            </div>
+
+            <!-- 🚀 NEW SMART LINK DISPLAY BOX -->
+            <div id="dynamicSearchResultBox" class="dynamic-search-results">
+                <h4>🔗 डायरेक्ट ऑनलाइन पोर्टल लिंक्स (Direct Portal Search Results):</h4>
+                <ul class="dynamic-list" id="dynamicResultList"></ul>
+            </div>
+        </div>
+
+        <!-- 💼 SECTION 1: JOBS, ADMIT CARDS & RESULTS -->
+        <div class="section-header" id="secJobs">💼 Active Sarkari Jobs, Admit Cards & Results 2026</div>
+        <div class="sarkari-grid">
+            <!-- LATEST JOBS CARD -->
+            <div class="sarkari-card">
+                <div class="sarkari-head head-jobs">💼 Active Jobs <span id="syncJobTag">AUTO-SYNC</span></div>
+                <ul class="sarkari-list" id="jobsList">
+                    <li data-qual="graduate"><a href="https://ssc.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> SSC CGL Recruitment 2026 <span class="badge-qual">Graduate</span></a><button class="btn-action btn-save" onclick="saveJob('SSC CGL 2026', 'https://ssc.gov.in')">⭐ Save</button><a href="https://ssc.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li data-qual="iti"><a href="https://indianrailways.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> RRB NTPC & Group D Form 2026 <span class="badge-qual">10th/ITI</span></a><button class="btn-action btn-save" onclick="saveJob('RRB NTPC 2026', 'https://indianrailways.gov.in')">⭐ Save</button><a href="https://indianrailways.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li data-qual="12th"><a href="https://uppbpb.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> UP Police Constable & SI Form 2026 <span class="badge-qual">12th Pass</span></a><button class="btn-action btn-save" onclick="saveJob('UP Police Form 2026', 'https://uppbpb.gov.in')">⭐ Save</button><a href="https://uppbpb.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li data-qual="10th"><a href="https://www.joinindiannavy.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> Indian Navy Agniveer SSR / MR 2026 <span class="badge-qual">10th/12th</span></a><button class="btn-action btn-save" onclick="saveJob('Navy Agniveer 2026', 'https://www.joinindiannavy.gov.in')">⭐ Save</button><a href="https://www.joinindiannavy.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li data-qual="graduate"><a href="https://ibps.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> IBPS PO / Clerk Online Form 2026 <span class="badge-qual">Graduate</span></a><button class="btn-action btn-save" onclick="saveJob('IBPS PO 2026', 'https://ibps.in')">⭐ Save</button><a href="https://ibps.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li data-qual="graduate"><a href="https://bpssc.bih.nic.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> Bihar Police SI Online Form 2026 <span class="badge-qual">Graduate</span></a><button class="btn-action btn-save" onclick="saveJob('Bihar SI 2026', 'https://bpssc.bih.nic.in')">⭐ Save</button><a href="https://bpssc.bih.nic.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li data-qual="10th"><a href="https://allahabadhighcourt.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> Allahabad High Court Group C & D Form <span class="badge-qual">10th/12th</span></a><button class="btn-action btn-save" onclick="saveJob('AHC Group C 2026', 'https://allahabadhighcourt.in')">⭐ Save</button><a href="https://allahabadhighcourt.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                </ul>
+            </div>
+
+            <!-- ADMIT CARDS CARD -->
+            <div class="sarkari-card" id="secAdmit">
+                <div class="sarkari-head head-admit">🎫 Admit Cards <span>LIVE</span></div>
+                <ul class="sarkari-list" id="admitList">
+                    <li><a href="https://ssc.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> SSC CHSL Tier-I Admit Card 2026</a><a href="https://ssc.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://indianrailways.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> RRB ALP Exam City Intimation Slip</a><a href="https://indianrailways.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://nta.ac.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> NTA NEET / JEE Main Admit Card 2026</a><a href="https://nta.ac.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://upsc.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> UPSC Civil Services Prelims Hall Ticket</a><a href="https://upsc.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://ctet.nic.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> CTET Exam City / Hall Ticket 2026</a><a href="https://ctet.nic.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                </ul>
+            </div>
+
+            <!-- EXAM RESULTS CARD -->
+            <div class="sarkari-card" id="secResults">
+                <div class="sarkari-head head-results">📜 Exam Results <span>LIVE</span></div>
+                <ul class="sarkari-list" id="resultsList">
+                    <li><a href="https://ssc.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> SSC GD Constable Final Result 2026</a><a href="https://ssc.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://updeled.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> UP DElEd Merit List & Cutoff 2026</a><a href="https://updeled.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://cbse.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> CBSE Class 10th / 12th Board Results</a><a href="https://cbse.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://ctet.nic.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> CTET Examination Score Card 2026</a><a href="https://ctet.nic.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://sbi.co.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> SBI Clerk Prelims Result 2026</a><a href="https://sbi.co.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ⏳ SECTION 2: UPCOMING VACANCIES 2026 -->
+        <div class="section-header" id="secUpcoming">⏳ Upcoming Sarkari Vacancies (आगे आने वाली भर्ती 2026)</div>
+        <div class="sarkari-card" style="margin-bottom: 30px;">
+            <div class="sarkari-head head-upcoming">🚨 Expected & Upcoming Govt Job Notifications</div>
+            <ul class="sarkari-list" id="upcomingList">
+                <li>
+                    <a href="https://ssc.gov.in" target="_blank" class="link-title"><span class="badge-soon">SOON</span> SSC MTS & Havaldar Notification 2026 (10,000+ Posts)</a>
+                    <button class="btn-action btn-save" onclick="saveJob('SSC MTS Notification 2026', 'https://ssc.gov.in')">⭐ Save</button>
+                </li>
+                <li>
+                    <a href="https://indianrailways.gov.in" target="_blank" class="link-title"><span class="badge-soon">SOON</span> Railway RPF Constable & SI New Vacancy 2026</a>
+                    <button class="btn-action btn-save" onclick="saveJob('RPF New Vacancy 2026', 'https://indianrailways.gov.in')">⭐ Save</button>
+                </li>
+                <li>
+                    <a href="https://indiapostgdsonline.gov.in" target="_blank" class="link-title"><span class="badge-soon">SOON</span> India Post GDS 5th Merit List & New Recruitment 2026</a>
+                    <button class="btn-action btn-save" onclick="saveJob('India Post GDS 2026', 'https://indiapostgdsonline.gov.in')">⭐ Save</button>
+                </li>
+                <li>
+                    <a href="https://upsssc.gov.in" target="_blank" class="link-title"><span class="badge-soon">SOON</span> UP Lekhpal & Revenue Inspector 8000+ Vacancy</a>
+                    <button class="btn-action btn-save" onclick="saveJob('UP Lekhpal Vacancy 2026', 'https://upsssc.gov.in')">⭐ Save</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 🪪 SECTION 3: OFFICIAL GOVERNMENT DOCUMENTS SERVICES -->
+        <div class="section-header" id="secDocs">🪪 Official Sarkari Documents (ऑनलाइन सरकारी सेवाएं)</div>
+        <div class="sarkari-card" style="margin-bottom: 30px;">
+            <div class="sarkari-head head-docs">💳 Government Identity Cards Direct Portal Links</div>
+            <div class="docs-grid">
+                <a href="https://myaadhaar.uidai.gov.in" target="_blank" class="doc-btn-card">🆔 Aadhaar Portal</a>
+                <a href="https://eportal.incometax.gov.in" target="_blank" class="doc-btn-card">💳 PAN Card Services</a>
+                <a href="https://voters.eci.gov.in" target="_blank" class="doc-btn-card">🗳️ Voter ID Portal</a>
+                <a href="https://nfsa.gov.in" target="_blank" class="doc-btn-card">🌾 Ration Card Online</a>
+                <a href="https://parivahan.gov.in" target="_blank" class="doc-btn-card">🚗 Driving License</a>
+                <a href="https://www.passportindia.gov.in" target="_blank" class="doc-btn-card">🛂 Passport Seva</a>
+                <a href="https://epfindia.gov.in" target="_blank" class="doc-btn-card">🏦 EPFO Passbook Portal</a>
+                <a href="https://eshram.gov.in" target="_blank" class="doc-btn-card">👷 E-Shram Card</a>
+            </div>
+        </div>
+
+        <!-- 🌟 SECTION 4: GOVERNMENT SCHEMES & SCHOLARSHIPS -->
+        <div class="section-header" id="secSchemes">🌟 Active & Upcoming Sarkari Yojana 2026</div>
+        <div class="sarkari-grid">
+            <div class="sarkari-card">
+                <div class="sarkari-head head-women">👩 महिला एवं बालिका योजनाएं</div>
+                <ul class="sarkari-list" id="womenList">
+                    <li><a href="https://wcd.nic.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> PM Matru Vandana Yojana Form</a><a href="https://wcd.nic.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://pmyuj.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> Lakhpati Didi Scheme Application</a><a href="https://pmyuj.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://pmujgwala.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> PM Ujjwala 2.0 Free Gas Connection</a><a href="https://pmujgwala.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                </ul>
+            </div>
+            <div class="sarkari-card">
+                <div class="sarkari-head head-farmer">🚜 किसान व स्वरोजगार योजनाएं</div>
+                <ul class="sarkari-list" id="farmerList">
+                    <li><a href="https://pmkisan.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> PM Kisan Samman Nidhi Status</a><a href="https://pmkisan.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://pmvishwakarma.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> PM Vishwakarma Tool Kit Registration</a><a href="https://pmvishwakarma.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://pmegp.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> PMEGP Loan Subsidy Scheme</a><a href="https://pmegp.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                </ul>
+            </div>
+            <div class="sarkari-card">
+                <div class="sarkari-head head-scholarship">🎓 छात्रवृत्ति योजनाएं (Scholarships)</div>
+                <ul class="sarkari-list" id="scholarshipList">
+                    <li><a href="https://scholarships.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> National Scholarship Portal (NSP)</a><a href="https://scholarships.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://scholarship.up.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> UP Scholarship Pre/Post Matric Online</a><a href="https://scholarship.up.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                    <li><a href="https://pmsonline.bih.nic.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> Bihar Post Matric Scholarship 2026</a><a href="https://pmsonline.bih.nic.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 📖 SECTION 5: SYLLABUS & ANSWER KEY -->
+        <div class="section-header" id="secSyllabus">📖 Exam Syllabus & Answer Key</div>
+        <div class="sarkari-card" style="margin-bottom: 30px;">
+            <div class="sarkari-head head-syllabus">📝 Official Syllabus & Answer Keys Download</div>
+            <ul class="sarkari-list">
+                <li><a href="https://ssc.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> SSC CGL Tier 1 / Tier 2 Official Syllabus PDF</a><a href="https://ssc.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                <li><a href="https://indianrailways.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> Railway RRB NTPC Revised Syllabus & Exam Pattern</a><a href="https://indianrailways.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+                <li><a href="https://ssc.gov.in" target="_blank" class="link-title"><span class="badge-live">LIVE</span> SSC GD Constable Official Answer Key 2026</a><a href="https://ssc.gov.in" target="_blank" class="btn-action btn-view">देखें ↗</a></li>
+            </ul>
+        </div>
+
+        <!-- SECTION 6: SMART ADD-ON TOOLS -->
+        <div class="section-header" id="secNewTools">⚡ Smart Add-on Features (योग्यता, स्कोर व प्रिंट)</div>
+        <div class="tools-grid">
             <div class="tool-card">
-                <h2>📷 Instant Photo & Signature Resizer</h2>
-                <p style="font-size:0.78rem; opacity:0.85;">Form me photo 20KB-50KB aur Sign 10KB-20KB karne ke liye:</p>
-                <div class="tool-inputs">
-                    <div>
-                        <label>Select Photo/Signature:</label>
-                        <input type="file" id="imageInput" accept="image/*">
-                    </div>
-                    <div style="display:flex; gap:10px;">
-                        <div style="flex:1;">
-                            <label>Width (px):</label>
-                            <input type="number" id="targetWidth" value="200">
-                        </div>
-                        <div style="flex:1;">
-                            <label>Height (px):</label>
-                            <input type="number" id="targetHeight" value="230">
-                        </div>
-                    </div>
-                </div>
-                <button class="btn-tool" onclick="resizeImage('imageInput', 'targetWidth', 'targetHeight', 'resizerResult')">Resize & Download 📥</button>
-                <div id="resizerResult" style="margin-top:10px; text-align:center;"></div>
+                <h3>🎯 Eligibility Finder (योग्यता अनुसार जॉब्स)</h3>
+                <label style="font-size: 0.8rem; font-weight: 700;">अपनी उच्चतम योग्यता चुनें:</label>
+                <select id="qualificationSelect" onchange="filterJobsByQual()">
+                    <option value="all">-- सभी जॉब्स देखें --</option>
+                    <option value="10th">10th Pass Jobs</option>
+                    <option value="12th">12th Pass Jobs</option>
+                    <option value="graduate">Graduation Pass Jobs</option>
+                    <option value="iti">ITI / Diploma Jobs</option>
+                </select>
+                <div id="qualResultStatus" style="font-size:0.8rem; font-weight:600; color:var(--accent-color);"></div>
             </div>
 
             <div class="tool-card">
-                <h2>📅 Sarkari Age Calculator (आयु गणना)</h2>
-                <p style="font-size:0.78rem; opacity:0.85;">Form cutoff date tak apni exact umar check karein:</p>
-                <div class="tool-inputs">
+                <h3>🧮 Score & Negative Marking Calculator</h3>
+                <div style="display:flex; gap:8px;">
+                    <input type="number" id="correctAns" placeholder="सही प्रश्न" min="0">
+                    <input type="number" id="wrongAns" placeholder="गलत प्रश्न" min="0">
+                </div>
+                <div style="display:flex; gap:8px;">
+                    <input type="number" id="marksPerQ" placeholder="अंक/प्रश्न" value="1">
+                    <input type="number" id="negMarking" placeholder="नेगेटिव मार्किंग" value="0.25" step="0.05">
+                </div>
+                <button class="btn-tool" onclick="calculateExamScore()">मार्क्स कैलकुलेट करें</button>
+                <div id="scoreCalcResult" style="font-size:0.85rem; font-weight:700; color:#16a34a;"></div>
+            </div>
+
+            <div class="tool-card">
+                <h3>🖨️ Form / Admit Card Print Helper</h3>
+                <input type="file" id="printFileInput" accept="image/*" onchange="previewForPrint(event)">
+                <button class="btn-tool" onclick="triggerA4Print()" style="background:#0284c7;">A4 साइज़ डायरेक्ट प्रिंट करें</button>
+            </div>
+        </div>
+
+        <!-- PRINTABLE HIDDEN CONTAINER -->
+        <div id="printable-area" style="display:none; text-align: center; padding: 20px;">
+            <h2>Sarkari Document Print Helper</h2>
+            <hr style="margin: 15px 0;">
+            <img id="printImagePreview" src="" alt="Document Preview" style="max-width: 100%; height: auto; border: 1px solid #ccc; padding: 5px;">
+        </div>
+
+        <!-- 📄 SECTION 7: PDF CONVERTER TOOL -->
+        <div style="margin:35px 0;" id="secPdf">
+            <div class="section-header">📄 Instant PDF Converter Tool (Image & Text to PDF)</div>
+            <div class="sarkari-card" style="padding:20px;">
+                <div class="tools-grid" style="margin-bottom:0;">
                     <div>
-                        <label>Your Date of Birth (जन्म तिथि):</label>
-                        <input type="date" id="dobInput">
+                        <label style="font-size:0.8rem; font-weight:700; margin-bottom:5px; display:block;">Select Image (JPG / PNG):</label>
+                        <input type="file" id="pdfImgInput" accept="image/*">
                     </div>
                     <div>
-                        <label>Age Cutoff Date (कटऑफ तिथि):</label>
-                        <input type="date" id="cutoffInput" value="2026-07-01">
+                        <label style="font-size:0.8rem; font-weight:700; margin-bottom:5px; display:block;">Or Enter Text / Content:</label>
+                        <textarea id="pdfTextInput" rows="2" placeholder="यहाँ अपना टेक्स्ट या नोट्स लिखें..."></textarea>
                     </div>
                 </div>
-                <button class="btn-tool" style="background:#2b6cb0;" onclick="calculateAge()">Calculate Exact Age ⏱️</button>
-                <div id="ageResult" style="margin-top:12px; font-weight:bold; font-size:0.88rem; text-align:center; color:#2b6cb0;"></div>
+                <button class="btn-tool" onclick="convertAndDownloadPDF()" style="margin-top:15px; background:#0284c7;">⚡ Convert & Download PDF</button>
             </div>
         </div>
 
-        <div class="filter-section">
-            <div class="pills-title">🔍 Quick Filter Services & Qualification:</div>
-            <div class="category-pills">
-                <button class="pill active" onclick="filterCategory('all')">🌐 All Services (Sabhi Link)</button>
-                <button class="pill" onclick="filterCategory('10th')">📜 10th Pass Jobs</button>
-                <button class="pill" onclick="filterCategory('12th')">📑 12th Pass Jobs</button>
-                <button class="pill" onclick="filterCategory('grad')">🎓 Graduate Jobs</button>
-                <button class="pill" onclick="filterCategory('doc')">🪪 ID Cards & Certs</button>
-                <button class="pill" onclick="filterCategory('women')">👩 Women Schemes</button>
-                <button class="pill" onclick="filterCategory('farmer')">🚜 Farmers & Rural</button>
+        <!-- ⭐ SAVED JOBS ORGANIZER -->
+        <div style="margin:35px 0;" id="secSaved">
+            <div class="section-header">⭐ Your Saved Items (आपकी पसंदीदा जॉब्स)</div>
+            <div class="sarkari-card">
+                <div class="sarkari-head head-saved">📌 Bookmarked Updates</div>
+                <ul class="sarkari-list" id="savedList"><li style="color:var(--text-muted);">कोई आइटम सेव नहीं है।</li></ul>
             </div>
         </div>
 
-        <!-- 🔴 AUTOMATIC LIVE UPDATES ENGINE CARD -->
-        <div class="section-header" id="live-updates">🔴 Auto Live Updates (Real-Time Sarkari Feed)</div>
-        <div class="grid-1" style="margin-bottom:25px;">
-            <div class="card">
-                <div class="card-head bg-live">
-                    <span>⚡ Live Govt & Educational Notifications (Auto-Fetched)</span>
-                    <span style="font-size:0.75rem; background:rgba(255,255,255,0.2); padding:2px 8px; border-radius:10px;">Auto Refreshing</span>
+        <!-- 📄 AUTO RESUME ENGINE -->
+        <div style="margin:35px 0;" id="secResume">
+            <div class="section-header">📝 Professional Resume / Bio-Data Generator</div>
+            <div class="sarkari-card" style="padding:20px;">
+                <div class="tools-grid" style="margin-bottom:0;">
+                    <div><label style="font-size:0.8rem; font-weight:700;">Full Name:</label><input type="text" id="resName" placeholder="Rahul Sharma"></div>
+                    <div><label style="font-size:0.8rem; font-weight:700;">Mobile No:</label><input type="text" id="resPhone" placeholder="+91 9876543210"></div>
+                    <div><label style="font-size:0.8rem; font-weight:700;">Email:</label><input type="email" id="resEmail" placeholder="rahul@gmail.com"></div>
+                    <div><label style="font-size:0.8rem; font-weight:700;">Qualification:</label><input type="text" id="resEdu" placeholder="10th, 12th, B.A / B.Tech"></div>
                 </div>
-                <div class="card-body">
-                    <ul id="liveFeedList" class="fast-list">
-                        <li><span>⏳ Fetching live updates from govt portals...</span></li>
-                    </ul>
-                </div>
+                <button class="btn-tool" onclick="generateResumePDF()" style="margin-top:15px; background:#16a34a;">📄 Download PDF Resume</button>
             </div>
         </div>
 
-        <!-- SECTION 1: JOBS, RESULTS & UPCOMING -->
-        <div class="section-header" id="jobs">💼 Recruitment, Results & Exam Notifications</div>
-        <div class="grid-3">
-            
-            <div class="card">
-                <div class="card-head bg-jobs">💼 Active Recruitment Forms</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="grad">
-                            <div>
-                                <a href="https://ssc.gov.in" target="_blank" class="title-link"><span class="tag tag-student">SSC</span>SSC CGL 2026 Form</a>
-                                <br><div class="job-details-badge">💰 Salary: ₹35,400 - ₹1,42,400</div> <div class="deadline-badge">⏰ Last Date Approaching</div>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn-action btn-guide" onclick="openGuide('SSC CGL 2026', 'https://ssc.gov.in', 'Aadhaar Card, Graduation Marksheet, Live Photo, Signature', '1. Official SSC Portal par Register / Login karein.\n2. Personal & Educational Details dhyaan se bharein.\n3. Photo (20-50 KB) & Sign (10-20 KB) upload karein.\n4. Application Fee (₹100) UPI/Netbanking se pay karein.\n5. Form Submit karke Final PDF Download karein.')">📋 How to Apply</button>
-                                <a href="https://ssc.gov.in" target="_blank" class="btn-action">Apply</a>
-                                <button class="btn-action btn-syl" onclick="openSyllabus('SSC CGL 2026', 'Tier 1: Math, Reasoning, English, GK (100 Qs / 200 Marks)\nTier 2: Advanced Math, English, Reasoning & Computer Test.')">Syllabus</button>
-                                <button class="btn-action btn-fav" onclick="toggleBookmark(this, 'SSC CGL 2026')">⭐</button>
-                                <button class="btn-action btn-share" onclick="shareJob('SSC CGL 2026', 'https://ssc.gov.in')">📲</button>
-                            </div>
-                        </li>
-                        <li data-cat="12th">
-                            <div>
-                                <a href="https://indianrailways.gov.in" target="_blank" class="title-link"><span class="tag tag-student">Railway</span>RRB NTPC & Tech</a>
-                                <br><div class="job-details-badge">💰 Salary: ₹19,900 - ₹35,400</div>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn-action btn-guide" onclick="openGuide('RRB NTPC', 'https://indianrailways.gov.in', '10th/12th Marksheet, Aadhaar Card, Photo, Signature', '1. Railway Recruitment Board portal par apna Zone chunein.\n2. Registration karke OTP verify karein.\n3. Post Preference dhyaan se select karein.\n4. Document & Resized photo/signature upload karein.\n5. Payment karke Final Printout safe rakhein.')">📋 How to Apply</button>
-                                <a href="https://indianrailways.gov.in" target="_blank" class="btn-action">Apply</a>
-                                <button class="btn-action btn-syl" onclick="openSyllabus('RRB NTPC', 'CBT 1: General Awareness (40), Math (30), Reasoning (30)\nDuration: 90 Minutes.')">Syllabus</button>
-                                <button class="btn-action btn-fav" onclick="toggleBookmark(this, 'RRB NTPC')">⭐</button>
-                                <button class="btn-action btn-share" onclick="shareJob('RRB NTPC', 'https://indianrailways.gov.in')">📲</button>
-                            </div>
-                        </li>
-                        <li data-cat="grad">
-                            <div>
-                                <a href="https://sbi.co.in/careers" target="_blank" class="title-link"><span class="tag tag-student">Bank</span>SBI PO / Clerk Form</a>
-                                <br><div class="job-details-badge">💰 In-Hand: ~₹52,000/mo</div>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn-action btn-guide" onclick="openGuide('SBI PO / Clerk', 'https://sbi.co.in/careers', 'Graduation Certificate, Aadhaar, Left Thumb Impression, Handwritten Declaration', '1. SBI Careers Portal par New Registration par click karein.\n2. Basic Details aur Mobile Number daal kar ID banayein.\n3. Photo, Signature, Left Thumb & Declaration upload karein.\n4. Application Fee pay karke print nikalein.')">📋 How to Apply</button>
-                                <a href="https://sbi.co.in/careers" target="_blank" class="btn-action">Apply</a>
-                                <button class="btn-action btn-syl" onclick="openSyllabus('SBI PO', 'Prelims: English (30), Quant (35), Reasoning (35)\nMains: Data Analysis & General Awareness.')">Syllabus</button>
-                                <button class="btn-action btn-fav" onclick="toggleBookmark(this, 'SBI PO')">⭐</button>
-                            </div>
-                        </li>
-                        <li data-cat="grad">
-                            <div>
-                                <a href="https://upsc.gov.in" target="_blank" class="title-link"><span class="tag tag-student">UPSC</span>UPSC IAS / IFS Exam Form</a>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn-action btn-guide" onclick="openGuide('UPSC IAS', 'https://upsc.gov.in', 'One Time Registration (OTR) ID, Photo ID, Degree', '1. Pehle UPSC OTR Portal par ID banayein (agar pehle se nahi hai).\n2. Active Examination mein IAS/IFS chunein.\n3. Exam Centre aur Optional Subject dhyan se bharein.\n4. Online Fee submit karke confirmation page save karein.')">📋 How to Apply</button>
-                                <a href="https://upsc.gov.in" target="_blank" class="btn-action">Apply</a>
-                                <button class="btn-action btn-syl" onclick="openSyllabus('UPSC Civil Services', 'Prelims: GS Paper 1 (200 Marks) + CSAT Paper 2 (Qualifying)\nMains: 9 Written Papers + Interview.')">Syllabus</button>
-                            </div>
-                        </li>
-                        <li data-cat="10th">
-                            <div>
-                                <a href="https://joinindianarmy.nic.in" target="_blank" class="title-link"><span class="tag tag-student">Defense</span>Indian Army Agniveer</a>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn-action btn-guide" onclick="openGuide('Army Agniveer', 'https://joinindianarmy.nic.in', '10th Pass Certificate, Aadhaar Card, Photo', '1. Official portal par Eligibility Check karein.\n2. User ID & Password se Login karein.\n3. Category (General Duty/Technical/Tradesman) select karein.\n4. Address aur Education Details bharein aur Form Final Submit karein.')">📋 How to Apply</button>
-                                <a href="https://joinindianarmy.nic.in" target="_blank" class="btn-action">Apply</a>
-                            </div>
-                        </li>
-                        <li data-cat="10th">
-                            <div>
-                                <a href="https://indiapostgdsonline.gov.in" target="_blank" class="title-link"><span class="tag tag-student">Post</span>India Post GDS Bharti</a>
-                                <br><div class="job-details-badge">⚡ Direct Merit (No Exam)</div>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn-action btn-guide" onclick="openGuide('India Post GDS', 'https://indiapostgdsonline.gov.in', '10th Marksheet, Caste Certificate, Aadhaar', '1. Stage 1 Registration complete karein.\n2. Registration Number se Fee Pay karein.\n3. Circle aur Division ke Post Preference bharein.\n4. Photo/Sign upload karke printout nikaal lein.')">📋 How to Apply</button>
-                                <a href="https://indiapostgdsonline.gov.in" target="_blank" class="btn-action">Apply</a>
-                            </div>
-                        </li>
-                        <li data-cat="12th">
-                            <div><a href="https://upsssc.gov.in" target="_blank" class="title-link"><span class="tag tag-student">State</span>State Selection (UPSSSC/BSSC)</a></div>
-                            <div class="btn-group"><a href="https://upsssc.gov.in" target="_blank" class="btn-action">Apply</a></div>
-                        </li>
-                    </ul>
+        <!-- 🛠️ UTILITY TOOLS ENGINE -->
+        <div style="margin:35px 0;" id="secTools">
+            <div class="section-header">🛠️ Smart Utilities & Resizers</div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>🎂 Exact Age Calculator</h3>
+                    <input type="date" id="dobInput">
+                    <button class="btn-tool" onclick="calculateExactAge()">Calculate Age</button>
+                    <div id="ageResult" style="font-weight:700; font-size:0.85rem; color:var(--accent-color);"></div>
+                </div>
+                <div class="tool-card">
+                    <h3>📷 Photo Resizer (20-50KB)</h3>
+                    <input type="file" id="photoInput" accept="image/*">
+                    <button class="btn-tool" onclick="resizeAndDownload('photoInput', 200, 230, 'resized-photo.jpg')">Resize & Download</button>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-head bg-results">📜 Results & Admit Cards</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="12th"><a href="https://uppbpb.gov.in" target="_blank" class="title-link">UP Police Constable Result</a> <a href="https://uppbpb.gov.in" target="_blank" class="btn-action">Check</a></li>
-                        <li data-cat="12th"><a href="https://cbseresults.nic.in" target="_blank" class="title-link">CBSE Board 10th & 12th Results</a> <a href="https://cbseresults.nic.in" target="_blank" class="btn-action">Check</a></li>
-                        <li data-cat="12th"><a href="https://exams.nta.ac.in/NEET/" target="_blank" class="title-link">NEET UG Merit List & Scorecard</a> <a href="https://exams.nta.ac.in/NEET/" target="_blank" class="btn-action">Check</a></li>
-                        <li data-cat="12th"><a href="https://jeemain.nta.ac.in" target="_blank" class="title-link">JEE Main Phase Admit Card</a> <a href="https://jeemain.nta.ac.in" target="_blank" class="btn-action">Download</a></li>
-                        <li data-cat="grad"><a href="https://ctet.nic.in" target="_blank" class="title-link">CTET Exam Admit Card</a> <a href="https://ctet.nic.in" target="_blank" class="btn-action">Download</a></li>
-                        <li data-cat="grad"><a href="https://ibps.in" target="_blank" class="title-link">IBPS PO / Clerk Final Result</a> <a href="https://ibps.in" target="_blank" class="btn-action">Check</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-head bg-upcoming">🔮 Upcoming Notifications</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="10th"><a href="https://ssc.gov.in" target="_blank" class="title-link">SSC GD Constable 2026</a> <a href="#" class="btn-action" style="opacity:0.6">Coming Soon</a></li>
-                        <li data-cat="12th"><a href="https://upsc.gov.in" target="_blank" class="title-link">UPSC NDA & CDS II Exam</a> <a href="#" class="btn-action" style="opacity:0.6">Coming Soon</a></li>
-                        <li data-cat="women"><a href="https://wcd.nic.in" target="_blank" class="title-link"><span class="tag tag-women">Women</span>Anganwadi Bharti 2026</a> <a href="#" class="btn-action" style="opacity:0.6">Coming Soon</a></li>
-                        <li data-cat="10th"><a href="https://rrbcdg.gov.in" target="_blank" class="title-link">Railway Group D Bharti</a> <a href="#" class="btn-action" style="opacity:0.6">Coming Soon</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- SECTION 2: ALL GOVT DOCUMENTS -->
-        <div class="section-header" id="documents">🆔 All Government ID Cards, Certificates & Documents</div>
-        <div class="grid-2">
-            
-            <div class="card">
-                <div class="card-head bg-documents">🪪 Central Identity & Income Certificates</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="doc"><a href="https://myaadhaar.uidai.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">UIDAI</span>Aadhaar Card Download / Update</a> <a href="https://myaadhaar.uidai.gov.in" target="_blank" class="btn-action">Open Portal</a></li>
-                        <li data-cat="doc"><a href="https://onlineservices.tin.egov-nsdl.com" target="_blank" class="title-link"><span class="tag tag-doc">PAN</span>New PAN Card / Correction (NSDL)</a> <a href="https://onlineservices.tin.egov-nsdl.com" target="_blank" class="btn-action">Open Portal</a></li>
-                        <li data-cat="doc"><a href="https://eportal.incometax.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">ITD</span>Instant Free e-PAN Card via Aadhaar</a> <a href="https://eportal.incometax.gov.in" target="_blank" class="btn-action">Apply Free</a></li>
-                        <li data-cat="doc"><a href="https://voters.eci.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">ECI</span>New Voter ID Card / e-EPIC</a> <a href="https://voters.eci.gov.in" target="_blank" class="btn-action">Open Portal</a></li>
-                        <li data-cat="doc"><a href="https://edistrict.up.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Certificates</span>Income, Caste & Domicile (आय/जाति/निवास)</a> <a href="https://edistrict.up.gov.in" target="_blank" class="btn-action">e-District</a></li>
-                        <li data-cat="doc"><a href="https://epfindia.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">PF</span>EPFO Passbook & PF Claim</a> <a href="https://epfindia.gov.in" target="_blank" class="btn-action">EPFO Link</a></li>
-                        <li data-cat="doc"><a href="https://passportindia.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Passport</span>New Passport Online Apply</a> <a href="https://passportindia.gov.in" target="_blank" class="btn-action">Passport Seva</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-head bg-documents">📄 Transport, Land Records & Civil Services</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="doc"><a href="https://parivahan.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">DL/RC</span>Driving License & Vehicle RC</a> <a href="https://parivahan.gov.in" target="_blank" class="btn-action">Parivahan</a></li>
-                        <li data-cat="doc"><a href="https://nfsa.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Ration</span>Ration Card Apply / Download List</a> <a href="https://nfsa.gov.in" target="_blank" class="btn-action">NFSA Portal</a></li>
-                        <li data-cat="doc"><a href="https://digilocker.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Locker</span>DigiLocker Official Document Locker</a> <a href="https://digilocker.gov.in" target="_blank" class="btn-action">DigiLocker</a></li>
-                        <li data-cat="doc"><a href="https://upbhulekh.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Land</span>Bhulekh Land Records (भूलेख / खतौनी)</a> <a href="https://upbhulekh.gov.in" target="_blank" class="btn-action">Bhulekh Portal</a></li>
-                        <li data-cat="doc"><a href="https://crsorgi.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Civil</span>Birth & Death Certificate Portal</a> <a href="https://crsorgi.gov.in" target="_blank" class="btn-action">CRS Portal</a></li>
-                        <li data-cat="doc"><a href="https://services.india.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Police</span>Police Character Certificate Online</a> <a href="https://services.india.gov.in" target="_blank" class="btn-action">Govt Portal</a></li>
-                        <li data-cat="doc"><a href="https://eportal.incometax.gov.in" target="_blank" class="title-link"><span class="tag tag-doc">Tax</span>Income Tax Return (ITR) Filing</a> <a href="https://eportal.incometax.gov.in" target="_blank" class="btn-action">File ITR</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- SECTION 3: SCHOLARSHIPS -->
-        <div class="section-header" id="scholarships">🎓 All-India Student Scholarships & Educational Grants</div>
-        <div class="grid-2">
-            
-            <div class="card">
-                <div class="card-head bg-scholarship">🎓 Central & National Scholarship Portals</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="12th"><a href="https://scholarships.gov.in" target="_blank" class="title-link"><span class="tag tag-student">Central</span>National Scholarship Portal (NSP 2026)</a> <a href="https://scholarships.gov.in" target="_blank" class="btn-action">Apply Now</a></li>
-                        <li data-cat="10th"><a href="https://yet.nta.ac.in" target="_blank" class="title-link"><span class="tag tag-student">Central</span>PM YASASVI Scholarship Scheme</a> <a href="https://yet.nta.ac.in" target="_blank" class="btn-action">Apply Now</a></li>
-                        <li data-cat="grad"><a href="https://aicte-india.org" target="_blank" class="title-link"><span class="tag tag-student">AICTE</span>AICTE Pragati & Saksham Scholarship</a> <a href="https://aicte-india.org" target="_blank" class="btn-action">Apply Now</a></li>
-                        <li data-cat="12th"><a href="https://desw.gov.in" target="_blank" class="title-link"><span class="tag tag-student">Defense</span>PMSS Prime Minister's Scholarship</a> <a href="https://desw.gov.in" target="_blank" class="btn-action">Apply Now</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-head bg-scholarship">📜 State Scholarship & Credit Card Schemes</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="12th"><a href="https://scholarship.up.gov.in" target="_blank" class="title-link"><span class="tag tag-student">UP</span>UP Pre & Post-Matric Scholarship</a> <a href="https://scholarship.up.gov.in" target="_blank" class="btn-action">Apply Portal</a></li>
-                        <li data-cat="12th"><a href="https://pmsonline.bih.nic.in" target="_blank" class="title-link"><span class="tag tag-student">Bihar</span>Bihar Post-Matric Scholarship Portal</a> <a href="https://pmsonline.bih.nic.in" target="_blank" class="btn-action">Apply Portal</a></li>
-                        <li data-cat="12th"><a href="https://7nishchay-yuvaupmission.bihar.gov.in" target="_blank" class="title-link"><span class="tag tag-student">Bihar</span>Bihar Student Credit Card Scheme</a> <a href="https://7nishchay-yuvaupmission.bihar.gov.in" target="_blank" class="btn-action">Apply Portal</a></li>
-                        <li data-cat="12th"><a href="https://scholarshipportal.mp.nic.in" target="_blank" class="title-link"><span class="tag tag-student">MP</span>MP State Scholarship Portal 2.0</a> <a href="https://scholarshipportal.mp.nic.in" target="_blank" class="btn-action">Apply Portal</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- SECTION 4: WOMEN, FARMERS & WELFARE YOJANA -->
-        <div class="section-header" id="women-schemes">🌟 Welfare Schemes (महिला, किसान & स्वरोजगार योजनाएं)</div>
-        <div class="grid-2">
-            
-            <div class="card">
-                <div class="card-head bg-women">👩 Women & Girl Child Schemes (महिला एवं बालिका)</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="women"><a href="https://pmujgwala.gov.in" target="_blank" class="title-link"><span class="tag tag-women">Women</span>PM Ujjwala Free LPG Connection</a> <a href="https://pmujgwala.gov.in" target="_blank" class="btn-action">Apply</a></li>
-                        <li data-cat="women"><a href="https://wcd.nic.in" target="_blank" class="title-link"><span class="tag tag-women">Girls</span>Sukanya Samriddhi Yojana (SSY)</a> <a href="https://wcd.nic.in" target="_blank" class="btn-action">Details</a></li>
-                        <li data-cat="women"><a href="https://mksy.up.gov.in" target="_blank" class="title-link"><span class="tag tag-women">Girls</span>Kanya Sumangala Yojana (₹25,000)</a> <a href="https://mksy.up.gov.in" target="_blank" class="btn-action">Apply</a></li>
-                        <li data-cat="women"><a href="https://pmmvy.nic.in" target="_blank" class="title-link"><span class="tag tag-women">Women</span>PM Matru Vandana Yojana (PMMVY)</a> <a href="https://pmmvy.nic.in" target="_blank" class="btn-action">Apply</a></li>
-                        <li data-cat="women"><a href="https://cmladlibehna.mp.gov.in" target="_blank" class="title-link"><span class="tag tag-women">Women</span>Ladli Behna Yojana Monthly Cash</a> <a href="https://cmladlibehna.mp.gov.in" target="_blank" class="btn-action">Status</a></li>
-                        <li data-cat="women"><a href="https://wcd.nic.in" target="_blank" class="title-link"><span class="tag tag-women">Women</span>Free Silai Machine Scheme Form</a> <a href="https://wcd.nic.in" target="_blank" class="btn-action">Details</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card" id="farmers-schemes">
-                <div class="card-head bg-farmers">🚜 Farmers, Housing & Employment Schemes</div>
-                <div class="card-body">
-                    <ul class="fast-list">
-                        <li data-cat="farmer"><a href="https://pmkisan.gov.in" target="_blank" class="title-link"><span class="tag tag-farmer">Farmers</span>PM Kisan Samman Nidhi Status & e-KYC</a> <a href="https://pmkisan.gov.in" target="_blank" class="btn-action">Portal</a></li>
-                        <li data-cat="farmer"><a href="https://pmaymis.gov.in" target="_blank" class="title-link"><span class="tag tag-farmer">General</span>PM Awas Yojana Housing Subsidy</a> <a href="https://pmaymis.gov.in" target="_blank" class="btn-action">Apply</a></li>
-                        <li data-cat="farmer"><a href="https://pmfby.gov.in" target="_blank" class="title-link"><span class="tag tag-farmer">Farmers</span>PM Fasal Bima Yojana Crop Insurance</a> <a href="https://pmfby.gov.in" target="_blank" class="btn-action">Apply</a></li>
-                        <li data-cat="farmer"><a href="https://pmsuryaghar.gov.in" target="_blank" class="title-link"><span class="tag tag-farmer">General</span>PM Surya Ghar Free Solar Rooftop</a> <a href="https://pmsuryaghar.gov.in" target="_blank" class="btn-action">Apply</a></li>
-                        <li data-cat="farmer"><a href="https://pmvishwakarma.gov.in" target="_blank" class="title-link"><span class="tag tag-farmer">Artisans</span>PM Vishwakarma Tool Kit Loan</a> <a href="https://pmvishwakarma.gov.in" target="_blank" class="btn-action">Register</a></li>
-                        <li data-cat="farmer"><a href="https://eshram.gov.in" target="_blank" class="title-link"><span class="tag tag-farmer">Laborers</span>e-Shram Card Registration & Benefits</a> <a href="https://eshram.gov.in" target="_blank" class="btn-action">Register</a></li>
-                        <li data-cat="farmer"><a href="https://nrega.nic.in" target="_blank" class="title-link"><span class="tag tag-farmer">Rural</span>MGNREGA Job Card List & Payment</a> <a href="https://nrega.nic.in" target="_blank" class="btn-action">Check</a></li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
 
     </div>
 
-    <!-- Syllabus Modal -->
-    <div class="modal" id="sylModal">
+    <!-- FLOATING HELPLINE BUTTON & MODAL -->
+    <button class="helpline-trigger" onclick="toggleHelplineModal(true)">📞 Government Helplines</button>
+
+    <div class="modal-overlay" id="helplineModal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('sylModal')">&times;</span>
-            <h3 id="modalTitle" style="color:#d97706; margin-bottom:10px;">Syllabus Details</h3>
-            <p id="modalText" style="white-space:pre-line; font-size:0.9rem; line-height:1.6;"></p>
+            <div class="modal-header">
+                <h3>🏛️ सरकारी सहायता एवं हेल्पलाइन केंद्र</h3>
+                <button class="close-btn" onclick="toggleHelplineModal(false)">&times;</button>
+            </div>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:12px;">आधिकारिक पोर्टल सहायता संपर्क संख्या:</p>
+            <table class="helpline-table">
+                <tr>
+                    <th>विभाग / पोर्टल</th>
+                    <th>टोल-फ्री नंबर / संपर्क</th>
+                </tr>
+                <tr>
+                    <td>National Career Service (NCS)</td>
+                    <td>1514</td>
+                </tr>
+                <tr>
+                    <td>SSC Call Center Support</td>
+                    <td>1800-11-4499</td>
+                </tr>
+                <tr>
+                    <td>Railway Recruitment Board (RRB)</td>
+                    <td>1800-11-1393</td>
+                </tr>
+                <tr>
+                    <td>PM Kisan Helpline</td>
+                    <td>155261 / 1800115526</td>
+                </tr>
+                <tr>
+                    <td>EPFO (PF Support)</td>
+                    <td>1800-118-005</td>
+                </tr>
+            </table>
         </div>
     </div>
 
-    <!-- Step-by-Step Guidance Engine Modal -->
-    <div class="modal" id="guideModal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('guideModal')">&times;</span>
-            <h3 id="guideTitle" style="color:#2b6cb0; margin-bottom:5px;">📋 Step-by-Step Form Guidance</h3>
-            <p style="font-size:0.8rem; color:#718096; margin-bottom:15px;">Cyber Cafe jaane ki zaroorat nahi! Niche दिए गए steps follow karke khud form bharein:</p>
+    <canvas id="canvas" style="display:none;"></canvas>
 
-            <div style="background:#fffaf0; border:1px solid #feebc8; padding:10px; border-radius:6px; margin-bottom:15px;">
-                <b style="color:#c05621; font-size:0.85rem;">📁 Zaroori Documents (Pehle Se Tayar Rakhein):</b>
-                <p id="guideDocs" style="font-size:0.82rem; color:#742a2a; margin-top:2px;"></p>
-            </div>
-
-            <div id="guideStepsContainer"></div>
-
-            <!-- Inline Instant Resizer inside Modal -->
-            <div style="margin-top:20px; padding:15px; background:var(--bg); border-radius:8px; border:1px dashed #cbd5e0;">
-                <b style="font-size:0.88rem; color:#d97706; display:block; margin-bottom:5px;">📷 Photo/Signature Resize Karein (Form Ke Liye):</b>
-                <div style="display:flex; flex-direction:column; gap:8px;">
-                    <input type="file" id="modalImgInput" accept="image/*" style="font-size:0.8rem;">
-                    <div style="display:flex; gap:10px;">
-                        <input type="number" id="modalTargetW" value="200" placeholder="Width" style="width:50%; padding:5px; font-size:0.8rem;">
-                        <input type="number" id="modalTargetH" value="230" placeholder="Height" style="width:50%; padding:5px; font-size:0.8rem;">
-                    </div>
-                    <button class="btn-tool" style="padding:6px; font-size:0.8rem;" onclick="resizeImage('modalImgInput', 'modalTargetW', 'modalTargetH', 'modalResizerResult')">Resize & Download Image 📥</button>
-                    <div id="modalResizerResult" style="text-align:center; margin-top:5px;"></div>
-                </div>
-            </div>
-
-            <div style="margin-top:20px; text-align:center;">
-                <a id="guideApplyBtn" href="#" target="_blank" class="btn-tool" style="background:#2e7d32; text-decoration:none; display:inline-block; padding:12px 25px; font-size:0.95rem;">Sab Kuch Tayar Hai? Official Portal Par Apply Karein ➔</a>
-            </div>
-        </div>
-    </div>
-
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Sarkari Employment & Public Utility Portal | Ultra-Fast Student Engine</p>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Disclaimer</a>
+        </div>
+        <p>&copy; 2026 Sarkari Result Auto Portal | All Rights Reserved.</p>
     </footer>
 
-    <!-- Google Translate Base Scripts -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'hi',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-
-        // Custom Dynamic Language Switcher
-        function changeLanguage(langCode) {
-            var googleSelect = document.querySelector('.goog-te-combo');
-            if (googleSelect) {
-                googleSelect.value = langCode;
-                googleSelect.dispatchEvent(new Event('change'));
-            } else {
-                // Direct Fallback Translate Link via Google
-                window.location.href = `https://translate.google.com/translate?sl=hi&tl=${langCode}&u=${encodeURIComponent(window.location.href)}`;
-            }
-        }
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!-- JavaScript Main Engine -->
+    <!-- ⚡ JAVASCRIPT LOGIC ENGINE -->
     <script>
-        // AUTOMATIC LIVE RSS FEED ENGINE
-        async function fetchLiveSarkariUpdates() {
-            const feedContainer = document.getElementById('liveFeedList');
-            const rssFeedUrl = 'https://news.google.com/rss/search?q=sarkari+job+recruitment+notification+scheme+2026&hl=en-IN&gl=IN&ceid=IN:en';
-            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+        function toggleTheme() { document.body.classList.toggle('dark-mode'); }
 
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
+        // 🚀 1. COMPREHENSIVE BACKEND DYNAMIC DIRECTORY DATABASE
+        // (होमपेज पर कार्ड दिखे या न दिखे, इस डेटाबेस में हर लिंक सेव रहेगी)
+        const universalPortalDatabase = [
+            // SCORALSHIPS & YOJANA
+            { title: "National Scholarship Portal (NSP) Online Form", link: "https://scholarships.gov.in", cat: "Scholarship" },
+            { title: "UP Scholarship Pre & Post Matric Application", link: "https://scholarship.up.gov.in", cat: "Scholarship" },
+            { title: "Bihar Post Matric Scholarship Portal", link: "https://pmsonline.bih.nic.in", cat: "Scholarship" },
+            { title: "MP Scholarship Portal 2.0 Registration", link: "http://scholarshipportal.mp.nic.in", cat: "Scholarship" },
+            { title: "PM Kisan Samman Nidhi Yojana (eKYC & Status)", link: "https://pmkisan.gov.in", cat: "Sarkari Yojana" },
+            { title: "PM Vishwakarma Toolkit & Loan Registration", link: "https://pmvishwakarma.gov.in", cat: "Sarkari Yojana" },
+            { title: "PM Awas Yojana (PMAY) Gramin / Urban Application", link: "https://pmaymis.gov.in", cat: "Sarkari Yojana" },
+            { title: "PM Ujjwala Free Gas Connection Scheme 2.0", link: "https://pmujgwala.gov.in", cat: "Sarkari Yojana" },
+            { title: "Lakhpati Didi Yojana Registration Portal", link: "https://pmyuj.gov.in", cat: "Sarkari Yojana" },
+            { title: "Ayushman Bharat Golden Card Download Portal", link: "https://pmjay.gov.in", cat: "Health Scheme" },
 
-                if (data.status === 'ok' && data.items.length > 0) {
-                    feedContainer.innerHTML = '';
-                    data.items.slice(0, 5).forEach(item => {
+            // DOCUMENTS & CERTIFICATES
+            { title: "Aadhaar Card Download, Update & PVC Order", link: "https://myaadhaar.uidai.gov.in", cat: "Document Portal" },
+            { title: "PAN Card Apply Online (NSDL / UTIITSL)", link: "https://eportal.incometax.gov.in", cat: "Document Portal" },
+            { title: "Voter ID Card Online Apply & Correction", link: "https://voters.eci.gov.in", cat: "Document Portal" },
+            { title: "Driving License & Learning License (Parivahan)", link: "https://parivahan.gov.in", cat: "Document Portal" },
+            { title: "Passport Seva Online Application Portal", link: "https://www.passportindia.gov.in", cat: "Document Portal" },
+            { title: "Ration Card Apply Online (State Portal NFSA)", link: "https://nfsa.gov.in", cat: "Document Portal" },
+            { title: "EPFO Member Passbook & UAN Activation", link: "https://epfindia.gov.in", cat: "Document Portal" },
+            { title: "E-Shram Card Registration Portal", link: "https://eshram.gov.in", cat: "Document Portal" },
+            { title: "Birth & Death Certificate Portal (CRS Org)", link: "https://crsorgi.gov.in", cat: "Certificates" },
+            { title: "UP Caste / Income / Domicile Certificate (eDistrict)", link: "https://edistrict.up.gov.in", cat: "Certificates" },
+            { title: "Bihar RTPS Income, Caste & Residence Online", link: "https://serviceonline.bihar.gov.in", cat: "Certificates" },
+
+            // JOBS & RECRUITMENT BOARDS
+            { title: "SSC Official Portal (CGL, CHSL, MTS, GD)", link: "https://ssc.gov.in", cat: "Job Board" },
+            { title: "Railway Recruitment Board (RRB ALP, NTPC, Group D)", link: "https://indianrailways.gov.in", cat: "Job Board" },
+            { title: "UP Police Recruitment Board (UPPBPB)", link: "https://uppbpb.gov.in", cat: "Job Board" },
+            { title: "Bihar Police Subordinate Services Commission (BPSSC)", link: "https://bpssc.bih.nic.in", cat: "Job Board" },
+            { title: "UPSC Official Recruitment Portal", link: "https://upsc.gov.in", cat: "Job Board" },
+            { title: "IBPS Bank Clerk & PO Exam Online Portal", link: "https://ibps.in", cat: "Bank Jobs" },
+            { title: "SBI Careers & Recruitment Portal", link: "https://sbi.co.in", cat: "Bank Jobs" },
+            { title: "Indian Army Agniveer Rally Registration", link: "https://joinindianarmy.nic.in", cat: "Defense Jobs" },
+            { title: "Indian Navy Agniveer Official Portal", link: "https://www.joinindiannavy.gov.in", cat: "Defense Jobs" },
+            { title: "Indian Airforce Agniveervayu Recruitment", link: "https://agnipathvayu.cdac.in", cat: "Defense Jobs" },
+            { title: "India Post GDS Online Engagement Portal", link: "https://indiapostgdsonline.gov.in", cat: "Postal Jobs" }
+        ];
+
+        // 🚀 2. SMART DYNAMIC SEARCH FUNCTIONALITY
+        function smartUniversalSearch() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const resultBox = document.getElementById('dynamicSearchResultBox');
+            const resultList = document.getElementById('dynamicResultList');
+
+            // एलीमेंट्स को डोम में सर्च/फ़िल्टर करने का पुराना तरीका
+            document.querySelectorAll('.sarkari-list li, .doc-btn-card').forEach(el => {
+                el.style.display = el.innerText.toLowerCase().includes(query) ? 'flex' : 'none';
+            });
+
+            // यदि यूजर ने 2 अक्षरों से अधिक टाइप किया है
+            if (query.length >= 2) {
+                // बैकएंड डेटाबेस में मैच ढूंढें
+                const matches = universalPortalDatabase.filter(item => 
+                    item.title.toLowerCase().includes(query) || item.cat.toLowerCase().includes(query)
+                );
+
+                if (matches.length > 0) {
+                    resultList.innerHTML = '';
+                    matches.forEach(item => {
                         const li = document.createElement('li');
                         li.innerHTML = `
                             <div>
-                                <a href="${item.link}" target="_blank" class="title-link"><span class="tag tag-live">NEW</span>${item.title}</a>
-                                <br><div class="job-details-badge">🕒 Published: ${new Date(item.pubDate).toLocaleDateString()}</div>
+                                <a href="${item.link}" target="_blank">🚀 ${item.title}</a>
+                                <span class="cat-tag">${item.cat}</span>
                             </div>
-                            <div class="btn-group">
-                                <a href="${item.link}" target="_blank" class="btn-action">View News</a>
-                                <button class="btn-action btn-share" onclick="shareJob('${item.title.replace(/'/g, "")}', '${item.link}')">📲</button>
-                            </div>
+                            <a href="${item.link}" target="_blank" class="btn-action btn-view">डायरेक्ट खोलें ↗</a>
                         `;
-                        feedContainer.appendChild(li);
+                        resultList.appendChild(li);
                     });
+                    resultBox.style.display = 'block';
                 } else {
-                    feedContainer.innerHTML = '<li><span>⚡ Latest updates active on main portals below.</span></li>';
+                    resultList.innerHTML = `<li style="color:var(--text-muted); font-size:0.85rem;">कोई डायरेक्ट लिंक नहीं मिली। आप नीचे दी गई मुख्य श्रेणियों में देख सकते हैं या गूगल सर्फ कर सकते हैं।</li>`;
+                    resultBox.style.display = 'block';
                 }
-            } catch (error) {
-                feedContainer.innerHTML = '<li><span>⚡ Real-time updates engine is active. Check below categories.</span></li>';
+            } else {
+                resultBox.style.display = 'none';
             }
         }
 
-        window.addEventListener('DOMContentLoaded', fetchLiveSarkariUpdates);
-
-        // Modals Controls
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
+        // AUTO FEED FETCH ENGINE
+        async function fetchAutoJobs() {
+            const rssApiUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://www.sarkariresult.com/feed/";
+            try {
+                const response = await fetch(rssApiUrl);
+                const data = await response.json();
+                
+                if(data.items && data.items.length > 0) {
+                    const jobsList = document.getElementById('jobsList');
+                    data.items.slice(0, 5).forEach(item => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <a href="${item.link}" target="_blank" class="link-title"><span class="badge-auto">AUTO</span> ${item.title}</a>
+                            <button class="btn-action btn-save" onclick="saveJob('${item.title}', '${item.link}')">⭐ Save</button>
+                            <a href="${item.link}" target="_blank" class="btn-action btn-view">देखें ↗</a>
+                        `;
+                        jobsList.insertBefore(li, jobsList.firstChild);
+                    });
+                    document.getElementById('autoStatusBadge').innerText = "🤖 Auto-Sync: Live Data Fetched";
+                }
+            } catch (err) {
+                console.log("Auto Feed Fallback Enabled");
+                document.getElementById('autoStatusBadge').innerText = "🤖 Auto-Sync: Active";
+            }
         }
 
-        function openSyllabus(title, details) {
-            document.getElementById('modalTitle').innerText = '📚 Exam Pattern & Syllabus: ' + title;
-            document.getElementById('modalText').innerText = details;
-            document.getElementById('sylModal').style.display = 'flex';
+        // PDF CONVERTER ENGINE
+        function convertAndDownloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const imgInput = document.getElementById('pdfImgInput');
+            const textInput = document.getElementById('pdfTextInput').value;
+
+            if (imgInput.files && imgInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = new Image();
+                    img.src = e.target.result;
+                    img.onload = function () {
+                        doc.addImage(img, 'JPEG', 15, 15, 180, 160);
+                        if(textInput) {
+                            doc.setFontSize(12);
+                            doc.text(textInput, 15, 185);
+                        }
+                        doc.save('Converted_Document.pdf');
+                    };
+                };
+                reader.readAsDataURL(imgInput.files[0]);
+            } else if (textInput.trim() !== '') {
+                doc.setFontSize(14);
+                doc.text(textInput, 15, 20);
+                doc.save('Converted_Text.pdf');
+            } else {
+                alert('कृपया कोई फोटो चुनें या टेक्स्ट भरें!');
+            }
         }
 
-        // Guidance Engine
-        function openGuide(title, applyLink, docs, stepsText) {
-            document.getElementById('guideTitle').innerText = '📋 How to Apply: ' + title;
-            document.getElementById('guideDocs').innerText = docs;
-            document.getElementById('guideApplyBtn').href = applyLink;
+        // ELIGIBILITY FINDER
+        function filterJobsByQual() {
+            const selected = document.getElementById('qualificationSelect').value;
+            const items = document.querySelectorAll('#jobsList li');
+            let matchCount = 0;
 
-            const stepsContainer = document.getElementById('guideStepsContainer');
-            stepsContainer.innerHTML = '';
-
-            const stepsArray = stepsText.split('\n');
-            stepsArray.forEach((step, idx) => {
-                const div = document.createElement('div');
-                div.className = 'guide-step';
-                div.innerHTML = `<b>Step ${idx + 1}:</b> ${step.replace(/^\d+\.\s*/, '')}`;
-                stepsContainer.appendChild(div);
+            items.forEach(li => {
+                const q = li.getAttribute('data-qual');
+                if(selected === 'all' || q === selected) {
+                    li.style.display = 'flex';
+                    matchCount++;
+                } else {
+                    li.style.display = 'none';
+                }
             });
-
-            document.getElementById('modalResizerResult').innerHTML = '';
-            document.getElementById('guideModal').style.display = 'flex';
+            document.getElementById('qualResultStatus').innerText = selected === 'all' ? '' : `${matchCount} जॉब्स फ़िल्टर की गईं।`;
         }
 
-        // Image Resizer Engine
-        function resizeImage(inputId, wId, hId, resId) {
-            const fileInput = document.getElementById(inputId);
-            const targetW = parseInt(document.getElementById(wId).value);
-            const targetH = parseInt(document.getElementById(hId).value);
-            const resultBox = document.getElementById(resId);
+        // SCORE CALCULATOR
+        function calculateExamScore() {
+            const correct = parseFloat(document.getElementById('correctAns').value) || 0;
+            const wrong = parseFloat(document.getElementById('wrongAns').value) || 0;
+            const marksPerQ = parseFloat(document.getElementById('marksPerQ').value) || 1;
+            const neg = parseFloat(document.getElementById('negMarking').value) || 0;
 
-            if (!fileInput.files[0]) return alert('Kripya pehle photo select karein!');
+            const total = (correct * marksPerQ) - (wrong * neg);
+            document.getElementById('scoreCalcResult').innerText = `आपका कुल स्कोर: ${total.toFixed(2)} Marks`;
+        }
 
+        // PRINT HELPER
+        function previewForPrint(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('printImagePreview');
+                output.src = reader.result;
+                document.getElementById('printable-area').style.display = 'block';
+            };
+            if(event.target.files[0]) reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function triggerA4Print() {
+            const preview = document.getElementById('printImagePreview');
+            if(!preview.src || preview.src === window.location.href) {
+                return alert('कृपया प्रिंट के लिए फोटो/एडमिट कार्ड सेलेक्ट करें!');
+            }
+            window.print();
+        }
+
+        // HELPLINE MODAL TOGGLE
+        function toggleHelplineModal(show) {
+            document.getElementById('helplineModal').style.display = show ? 'flex' : 'none';
+        }
+
+        // PWA INSTALL PROMPT
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            const btn = document.getElementById('installAppBtn');
+            btn.style.display = 'block';
+            btn.addEventListener('click', () => {
+                deferredPrompt.prompt();
+            });
+        });
+
+        // NOTIFICATIONS API
+        function requestNotification() {
+            if ("Notification" in window) {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") alert("🔔 Auto Alerts Activated! Instant Job updates will arrive on your phone.");
+                    else alert("Notification Permission Denied.");
+                });
+            }
+        }
+
+        // RESUME ENGINE
+        function generateResumePDF() {
+            const name = document.getElementById('resName').value;
+            const phone = document.getElementById('resPhone').value;
+            const email = document.getElementById('resEmail').value;
+            const edu = document.getElementById('resEdu').value;
+            
+            if(!name || !phone) return alert("कृपया नाम और नंबर भरें!");
+            
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            doc.setFontSize(22);
+            doc.text(name, 20, 20);
+            doc.setFontSize(11);
+            doc.text(`Phone: ${phone} | Email: ${email}`, 20, 30);
+            doc.text(`Education Qualification: ${edu}`, 20, 40);
+            doc.text(`Generated via Sarkari Result Auto Portal 2026`, 20, 50);
+            doc.save(`${name}_Resume.pdf`);
+        }
+
+        // SAVED JOBS ENGINE
+        let savedJobs = JSON.parse(localStorage.getItem('savedSarkariJobs')) || [];
+        function saveJob(title, link) {
+            if(!savedJobs.some(j => j.link === link && j.title === title)) {
+                savedJobs.push({ title, link });
+                localStorage.setItem('savedSarkariJobs', JSON.stringify(savedJobs));
+                renderSavedJobs();
+                alert("⭐ आइटम सेव हो गया है!");
+            }
+        }
+
+        function renderSavedJobs() {
+            const container = document.getElementById('savedList');
+            if(savedJobs.length === 0) {
+                container.innerHTML = `<li style="color:var(--text-muted);">कोई आइटम सेव नहीं है।</li>`;
+                return;
+            }
+            container.innerHTML = '';
+            savedJobs.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${item.link}" target="_blank" class="link-title">${item.title}</a><button class="btn-action" onclick="removeSavedJob(${index})" style="background:#ef4444; color:white;">❌ Remove</button>`;
+                container.appendChild(li);
+            });
+        }
+
+        function removeSavedJob(index) {
+            savedJobs.splice(index, 1);
+            localStorage.setItem('savedSarkariJobs', JSON.stringify(savedJobs));
+            renderSavedJobs();
+        }
+
+        // AGE CALCULATOR ENGINE
+        function calculateExactAge() {
+            const dob = new Date(document.getElementById('dobInput').value);
+            if (isNaN(dob.getTime())) return alert("Valid DOB चुनें!");
+            const target = new Date();
+            let years = target.getFullYear() - dob.getFullYear();
+            let months = target.getMonth() - dob.getMonth();
+            if (months < 0 || (months === 0 && target.getDate() < dob.getDate())) {
+                years--;
+            }
+            document.getElementById('ageResult').innerText = `Age: ${years} Years`;
+        }
+
+        // PHOTO RESIZER ENGINE
+        function resizeAndDownload(inputId, width, height, fileName) {
+            const input = document.getElementById(inputId);
+            if (!input.files || !input.files[0]) return alert("फोटो सेलेक्ट करें!");
             const reader = new FileReader();
             reader.onload = function (e) {
                 const img = new Image();
                 img.src = e.target.result;
                 img.onload = function () {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = targetW;
-                    canvas.height = targetH;
-                    canvas.getContext('2d').drawImage(img, 0, 0, targetW, targetH);
-                    const resizedUrl = canvas.toDataURL('image/jpeg', 0.85);
-
-                    resultBox.innerHTML = `
-                        <p style="color:#2f855a; font-weight:bold; font-size:0.8rem; margin-top:5px;">✅ Photo Resized!</p>
-                        <img src="${resizedUrl}" style="border:1px solid #ccc; max-width:100px; border-radius:4px; margin:5px 0;"><br>
-                        <a href="${resizedUrl}" download="sarkari_resized.jpg" class="btn-action" style="background:#2f855a; color:#fff;">Download 📥</a>
-                    `;
+                    const canvas = document.getElementById('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = width;
+                    canvas.height = height;
+                    ctx.drawImage(img, 0, 0, width, height);
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+                    const link = document.createElement('a');
+                    link.href = dataUrl;
+                    link.download = fileName;
+                    link.click();
                 };
             };
-            reader.readAsDataURL(fileInput.files[0]);
+            reader.readAsDataURL(input.files[0]);
         }
 
-        // Bookmark Toggle
-        function toggleBookmark(btn, jobTitle) {
-            if(btn.innerText === '⭐') {
-                btn.innerText = '❤️ Saved';
-                btn.style.background = '#e53e3e';
-                btn.style.color = '#fff';
-            } else {
-                btn.innerText = '⭐';
-                btn.style.background = '#fff5f5';
-                btn.style.color = '#e53e3e';
-            }
+        function setFilter(cat, btn) {
+            document.querySelectorAll('.tag-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('searchInput').value = cat !== 'all' ? cat : '';
+            smartUniversalSearch();
         }
 
-        // Age Calculator
-        function calculateAge() {
-            const dob = new Date(document.getElementById('dobInput').value);
-            const cutoff = new Date(document.getElementById('cutoffInput').value);
-            const res = document.getElementById('ageResult');
+        document.getElementById('liveClock').innerText = "Today: " + new Date().toLocaleDateString('hi-IN');
 
-            if (!dob.getTime()) return res.innerHTML = "❌ Kripya apni Sahi Janam Tithi (DOB) chunein!";
-
-            let years = cutoff.getFullYear() - dob.getFullYear();
-            let months = cutoff.getMonth() - dob.getMonth();
-            let days = cutoff.getDate() - dob.getDate();
-
-            if (days < 0) {
-                months--;
-                days += new Date(cutoff.getFullYear(), cutoff.getMonth(), 0).getDate();
-            }
-            if (months < 0) {
-                years--;
-                months += 12;
-            }
-
-            res.innerHTML = `🎉 Cutoff Date tak Aapki Umar: <br><span style="font-size:1.1rem; color:#2e7d32;">${years} Saal, ${months} Mahine, aur ${days} Din</span> hai.`;
-        }
-
-        // Share Link Engine
-        function shareJob(title, link) {
-            const text = `📢 *Sarkari Job Update:* ${title}\nCheck Details & Apply Online Here: ${link}`;
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
-        }
-
-        // Instant Search Engine
-        function searchFast() {
-            let filter = document.getElementById('searchInput').value.toLowerCase().trim();
-            let items = document.querySelectorAll('.fast-list li');
-            let foundCount = 0;
-
-            items.forEach(li => {
-                if(li.innerText.toLowerCase().includes(filter)) {
-                    li.style.display = "flex";
-                    foundCount++;
-                } else {
-                    li.style.display = "none";
-                }
-            });
-
-            let fallbackBox = document.getElementById('searchFallback');
-            if (filter.length > 2 && foundCount === 0) {
-                fallbackBox.style.display = "block";
-                document.getElementById('fallbackText').innerText = filter;
-                document.getElementById('fallbackLink').href = `https://www.google.com/search?q=${encodeURIComponent(filter + ' official portal')}`;
-            } else {
-                fallbackBox.style.display = "none";
-            }
-        }
-
-        // Category Filter
-        function filterCategory(cat) {
-            document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
-            event.target.classList.add('active');
-
-            document.querySelectorAll('.fast-list li').forEach(li => {
-                let itemCat = li.getAttribute('data-cat');
-                if(cat === 'all' || itemCat === cat) li.style.display = "flex";
-                else li.style.display = "none";
-            });
-        }
-
-        // Dark Theme Toggle
-        function toggleTheme() {
-            document.body.classList.toggle('dark-theme');
-        }
+        // Page Initialization Engine
+        window.addEventListener('DOMContentLoaded', () => {
+            renderSavedJobs();
+            fetchAutoJobs();
+        });
     </script>
 </body>
 </html>
